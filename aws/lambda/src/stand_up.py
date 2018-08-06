@@ -7,10 +7,14 @@ s3_client = boto3.client('s3')
 ec2_resource = boto3.resource('ec2')
 subnet = ec2_resource.Subnet('subnet-1025015b')
 
-def lambda_handler(event, context):
-    # access the sys environment secret keys 
-    access_key = os.environ.get('ACCESS_KEY')
-    secret_key = os.environ.get('SECRET_KEY')
+# access the sys environment secret keys 
+access_key = os.environ.get('ACCESS_KEY')
+secret_key = os.environ.get('SECRET_KEY')
+
+
+def standUp(event, context):
+    ''' Lambda Handler for Standing Up ODL Projects
+    '''
     
     # read details from event passed
     projectId = str(event.get('projectId'))
@@ -39,30 +43,29 @@ def lambda_handler(event, context):
     
     # template UserData bash script to auto fusemount
     init_script = """#!/bin/bash
-sudo su
-yum install -y gcc libstdc++-devel gcc-c++ fuse fuse-devel curl-devel libxml2-devel mailcap automake openssl-devel git
-git clone https://github.com/s3fs-fuse/s3fs-fuse
+sudo yum install -y gcc libstdc++-devel gcc-c++ fuse fuse-devel curl-devel libxml2-devel mailcap automake openssl-devel git
+sudo git clone https://github.com/s3fs-fuse/s3fs-fuse
 cd s3fs-fuse/
-./autogen.sh
-./configure --prefix=/usr --with-openssl
-make
-make install
-touch /etc/passwd-s3fs
-echo {}:{} | tee /etc/passwd-s3fs
-chmod 400 /etc/passwd-s3fs
-mkdir ~/data
-s3fs odltest-mal ~/data -o use_cache=/tmp
+sudo ./autogen.sh
+sudo ./configure --prefix=/usr --with-openssl
+sudo make
+sudo make install
+sudo touch /etc/passwd-s3fs
+sudo echo {}:{} | sudo tee /etc/passwd-s3fs
+sudo chmod 400 /etc/passwd-s3fs
+sudo mkdir ~/data
+sudo s3fs odltest-mal ~/data -o use_cache=/tmp
 cd ~/
-git clone {}
+sudo git clone {}
     """.format(access_key, secret_key, projectDetails.get('data'), projectDetails.get('github'))
     
     instance = subnet.create_instances(
-    ImageId = 'ami-b70554c8',
-    InstanceType = 't2.small',
-    MaxCount = 1,
-    MinCount = 1,
-    KeyName = key_pair.name,
-    UserData = init_script
+        ImageId = 'ami-b70554c8',
+        InstanceType = 't2.small',
+        MaxCount = 1,
+        MinCount = 1,
+        KeyName = key_pair.name,
+        UserData = init_script
     )
     
     try:
