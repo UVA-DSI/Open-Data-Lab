@@ -1,4 +1,4 @@
-The Open Data Lab github repositories are stored in the Data Science Institute organization space.
+The Open Data Lab github repositories are stored in the [Data Science Institute organization space](https://github.com/UVA-DSI).
 To request the creation of a repo please email uva-dsi-opendatalab-request@virginia.edu. 
 
 Include the following information:
