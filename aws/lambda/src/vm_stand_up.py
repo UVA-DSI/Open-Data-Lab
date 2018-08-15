@@ -1,5 +1,7 @@
 import boto3
 from botocore.exceptions import ClientError
+import datetime
+import time
 
 
 ec2_resource = boto3.resource('ec2')
@@ -10,13 +12,29 @@ def lambda_handler(event, context):
     # TODO implement
     print('Hello from Lambda')
 
+# generate a new key pair for EC2 instance
+    key_name = 'key_'+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
+    
+    key_pair = ec2_resource.create_key_pair(
+        KeyName = key_name
+    )
+    
+    # template UserData bash script to auto fusemount
+    init_script = """#!/bin/bash
+                     chmod u+x ~/.bash_profile
+                     echo 'mkdir ~/scratch' >> /home/ec2-user/.bash_profile
+                     """
+                     
+                     
+                     
+                     
     instance = subnet.create_instances(
         ImageId = 'ami-b70554c8',
         InstanceType = 't2.nano',
         MaxCount = 1,
-        MinCount = 1
-#        KeyName = key_pair.name,
-#        UserData = init_script
+        MinCount = 1,
+        KeyName = key_pair.name,
+        UserData = init_script
     )
     
     
@@ -45,10 +63,36 @@ def lambda_handler(event, context):
     
     # The subject line for the email.
     SUBJECT = "Your VM is ready"
+
+    # add tags to describe the 
+    launched_instance.create_tags(
+        Tags = [
+            {
+                'Key': 'test',
+                'Value': 'TEST',
+            }
+            ]
+        )
+
+    time.sleep(2)
+
+    eni_list = None
+    publicIp = None
+
+    launched_instance.load()
+    network_interface = launched_instance.network_interfaces[0]      
+    network_interface.load()
+    eni_list =launched_instance.network_interfaces_attribute
+    publicIp = eni_list[0].get('Association',{}).get('PublicIp')
+    print("ip check",publicIp)
     
     # The email body for recipients with non-HTML email clients.
     BODY_TEXT = ("Open Data Lab VM for project TEST is ready.\r\n"
-                 "IP Address: test"
+                 "Step 1. Copy the contents below mark\r\n"
+                 "Step 2. Paste into terminal and execute\r\n"
+                 "Step 3. Execute connect.sh\r\n"
+                 "#//....oooOO0OOooo........oooOO0OOooo....START....oooOO0OOooo........oooOO0OOooo......\r\n"
+                 "echo '{0}' > {1} && chmod 400 {1}  && echo 'ssh -i {1} ec2-user@{2}' > connect.sh && chmod u+x connect.sh\r\n".format(key_pair.key_material, key_pair.name+'.pem', publicIp)
                 )
 
     # The character encoding for the email.
