@@ -31,15 +31,7 @@ def lambda_handler(event, context):
     print(projectKey)
 
     s3_client = boto3.client('s3')
-#    s3_access_key = os.environ.get('AWS_ACCESS_KEY')
-#    s3_secret_key = os.environ.get('AWS_SECRET_KEY')
-#    s3_access_key = os.getenv('AWS_ACCESS_KEY')
-#    s3_secret_key = os.getenv('AWS_SECRET_KEY')
-#    s3_access_key = os.environ('AWS_ACCESS_KEY')
-#    s3_secret_key = os.environ('AWS_SECRET_KEY')
-#    print('access key: ',s3_access_key)
-#    print('secret key: ',s3_secret_key)
-    
+
     try:
         projectS3 = s3_client.get_object(Bucket='odl-projects-test', Key=projectKey).get('Body').read()
         projectDetails = json.loads(projectS3.decode('utf-8'))
@@ -66,8 +58,10 @@ def lambda_handler(event, context):
                      touch /etc/passwd-s3fs
                      echo {}:{} | tee /etc/passwd-s3fs
                      chmod 400 /etc/passwd-s3fs
-                     s3fs {} /home/ec2-user/data -o use_cache=/tmp &> /home/ec2-user/mount1.log
-                     s3fs {} /home/ed2-user/scratch -o use_cache=/tmp &> /home/ec2-user/mount2.log
+                     s3fs {} /home/ec2-user/data -o allow_other,use_cache=/tmp &> /home/ec2-user/mount1.log
+                     sudo chmod -R 444 /home/ec2-user/data/*
+                     s3fs {} /home/ec2-user/scratch -o allow_other,use_cache=/tmp &> /home/ec2-user/mount2.log
+                     sudo chmod -R 777 /home/ec2-user/scratch/*
                      
                      echo 'git clone {}' >> /home/ec2-user/.bash_profile
                      """.format(os.environ.get('ACCESS'), os.environ.get('SECRET'), projectDetails.get('data'), projectDetails.get('scratch'), 'https://github.com/UVA-DSI/Open-Data-Lab.git')
@@ -374,3 +368,5 @@ else:
     print(response['MessageId'])
     
 '''
+
+
