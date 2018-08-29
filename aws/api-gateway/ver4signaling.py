@@ -34,12 +34,13 @@ import sys, datetime, hashlib, hmac, os
 import requests # pip install requests
 
 # ************* REQUEST VALUES *************
-method = 'GET'
+method = 'POST'
 service = 'execute-api'
 host = 'lambda.amazonaws.com'
 region = 'us-east-1'
-endpoint = 'https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/default/vm_stand_up'
-request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
+endpoint = 'https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha/vm_stand_up'
+#request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
+request_parameters = 'a=5'
 
 
 
@@ -76,7 +77,7 @@ datestamp = t.strftime('%Y%m%d') # Date w/o time, used in credential scope
 
 # Step 2: Create canonical URI--the part of the URI from domain to query 
 # string (use '/' if no path)
-canonical_uri = '/default/vm_stand_up' 
+canonical_uri = '/alpha/vm_stand_up' 
 
 # Step 3: Create the canonical query string. In this example (a GET request),
 # request parameters are in the query string. Query string values must
