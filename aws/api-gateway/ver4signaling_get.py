@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 28 14:18:17 2018
-
-@author: lpa2a
-"""
-
 # Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 #
 # This file is licensed under the Apache License, Version 2.0 (the "License").
@@ -30,19 +22,16 @@ Created on Tue Aug 28 14:18:17 2018
 # See: http://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html
 # This version makes a GET request and passes the signature
 # in the Authorization header.
-import sys, datetime, hashlib, hmac, os , json
+import sys, os, base64, datetime, hashlib, hmac 
 import requests # pip install requests
 
 # ************* REQUEST VALUES *************
-method = 'POST'
-service = 'execute-api'
-host = 'lambda.amazonaws.com'
+method = 'GET'
+service = 'ec2'
+host = 'ec2.amazonaws.com'
 region = 'us-east-1'
-endpoint = 'https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha/vm_stand_up'
-#request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
-#request_parameters = "'operation':'vm_stand_up'"
-request_parameters = ''
-
+endpoint = 'https://ec2.amazonaws.com'
+request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
 
 # Key derivation functions. See:
 # http://docs.aws.amazon.com/general/latest/gr/signature-v4-examples.html#signature-v4-examples-python
@@ -58,8 +47,8 @@ def getSignatureKey(key, dateStamp, regionName, serviceName):
 
 # Read AWS access key from env. variables or configuration file. Best practice is NOT
 # to embed credentials in code.
-access_key = os.environ.get('access')
-secret_key = os.environ.get('secret')
+access_key = os.environ.get('AWS_ACCESS_KEY_ID')
+secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
 if access_key is None or secret_key is None:
     print('No access key is available.')
     sys.exit()
@@ -77,7 +66,7 @@ datestamp = t.strftime('%Y%m%d') # Date w/o time, used in credential scope
 
 # Step 2: Create canonical URI--the part of the URI from domain to query 
 # string (use '/' if no path)
-canonical_uri = '/alpha/vm_stand_up' 
+canonical_uri = '/' 
 
 # Step 3: Create the canonical query string. In this example (a GET request),
 # request parameters are in the query string. Query string values must
@@ -99,13 +88,11 @@ signed_headers = 'host;x-amz-date'
 
 # Step 6: Create payload hash (hash of the request body content). For GET
 # requests, the payload is an empty string ("").
-#payload=''
-payload='{"event":None,"context":None}'
-payload_hash = hashlib.sha256((payload).encode('utf-8')).hexdigest()
+payload_hash = hashlib.sha256(('').encode('utf-8')).hexdigest()
 
 # Step 7: Combine elements to create canonical request
 canonical_request = method + '\n' + canonical_uri + '\n' + canonical_querystring + '\n' + canonical_headers + '\n' + signed_headers + '\n' + payload_hash
-#canonical_request = method + '\n' + canonical_uri + '\n' + payload + '\n' + canonical_headers + '\n' + signed_headers + '\n' + payload_hash
+
 
 # ************* TASK 2: CREATE THE STRING TO SIGN*************
 # Match the algorithm to the hashing algorithm you use, either SHA-1 or
@@ -133,42 +120,16 @@ authorization_header = algorithm + ' ' + 'Credential=' + access_key + '/' + cred
 # be included in the canonical_headers and signed_headers, as noted
 # earlier. Order here is not significant.
 # Python note: The 'host' header is added automatically by the Python 'requests' library.
-headers = {'x-amz-date':amzdate, 'Authorization':authorization_header,'content-type': 'application/json'}
-#headers['event']={'a':1}  # requests.exceptions.InvalidHeader: Header value {'a': 1} must be of type str or bytes, not <class 'dict'>
-#headers['context']={'b':2}
+headers = {'x-amz-date':amzdate, 'Authorization':authorization_header}
+
 
 # ************* SEND THE REQUEST *************
-#request_url = endpoint + '?' + canonical_querystring
-request_url = endpoint + '?' + canonical_request
+request_url = endpoint + '?' + canonical_querystring
 
 print('\nBEGIN REQUEST++++++++++++++++++++++++++++++++++++')
-#print('Request URL = ' + request_url)
-#print('Canonical String = ' + canonical_querystring)
-#print('Canonical Request = ' + canonical_request)
-#print('String to Sign = ' + string_to_sign)
-#print('Headers = ' + headers)
-#r = requests.get(request_url, headers=headers)
-r = requests.post(request_url, data=json.dumps(payload), headers=headers)
+print('Request URL = ' + request_url)
+r = requests.get(request_url, headers=headers)
 
 print('\nRESPONSE++++++++++++++++++++++++++++++++++++')
 print('Response code: %d\n' % r.status_code)
 print(r.text)
-
-
-
-'''
-BEGIN REQUEST++++++++++++++++++++++++++++++++++++
-Canonical Request = POST
-/alpha/vm_stand_up
-
-host:lambda.amazonaws.com
-x-amz-date:20180829T200007Z
-
-host;x-amz-date
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-RESPONSE++++++++++++++++++++++++++++++++++++
-Response code: 400
-
-{"message":null}
-'''
