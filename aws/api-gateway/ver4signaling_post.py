@@ -35,10 +35,11 @@ import requests # pip install requests
 
 # ************* REQUEST VALUES *************
 method = 'POST'
-service = 'execute-api'
+service = 'lambda' #'execute-api'
 host = 'lambda.amazonaws.com'
 region = 'us-east-1'
 endpoint = 'https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha/vm_stand_up'
+endpoint = 'https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha-2/vm_stand_up'
 #request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
 #request_parameters = "'operation':'vm_stand_up'"
 request_parameters = ''
@@ -60,6 +61,7 @@ def getSignatureKey(key, dateStamp, regionName, serviceName):
 # to embed credentials in code.
 access_key = os.environ.get('access')
 secret_key = os.environ.get('secret')
+#secret_key = secret_key+'a'
 if access_key is None or secret_key is None:
     print('No access key is available.')
     sys.exit()
