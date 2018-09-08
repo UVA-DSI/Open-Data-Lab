@@ -1,5 +1,7 @@
 # https://github.com/DavidMuller/aws-requests-auth
 
+print("testing")
+
 import requests, os
 from aws_requests_auth.aws_auth import AWSRequestsAuth
 
@@ -11,6 +13,8 @@ auth = AWSRequestsAuth(aws_access_key=os.environ.get('access'),
                        aws_service='execute-api')
 
 response = requests.post('https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha-2/vm_stand_up',
-                        auth=auth)
+                        auth=auth,
+                        params={'projectID':1})
 print(response.content)
 
+print("status code: {}".format(response.status_code))
