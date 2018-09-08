@@ -14,20 +14,22 @@ subnet = ec2_resource.Subnet('subnet-6fbabc40')
 def lambda_handler(event, context):
     # TODO implement
     print('Hello from Lambda')
-
+#    print(event["queryStringParameters"]['projectID'])
+    
 # generate a new key pair for EC2 instance
     key_name = 'key_'+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
-    
+
     key_pair = ec2_resource.create_key_pair(
         KeyName = key_name
     )
     
     # read details from event passed
-    projectId = '1' #str(event.get('1'))
-    projectKey = '1.json' #str(event.get('1'))+'.json'
-    if projectId is None or projectId=="None":
-        return "Please Provide a Project Id"
+    #projectId = '1' #str(event.get('1'))
+    #projectKey = '1.json' #str(event.get('1'))+'.json'
+    #if projectId is None or projectId=="None":
+    #    return "Please Provide a Project Id"
 
+    projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
     print(projectKey)
 
     s3_client = boto3.client('s3')
@@ -40,6 +42,7 @@ def lambda_handler(event, context):
     except AssertionError:
         return "Project Datails not found for project:{}".format(projectKey)
 
+    print(projectDetails['github'])
  
     # template UserData bash script to auto fusemount
     init_script = """#!/bin/bash
@@ -73,15 +76,15 @@ def lambda_handler(event, context):
                      echo 'Only your scratch data and space will persist'
                      echo 'When you shutdown this instance all other disk space will be recycled.'
                      echo ''
-                     """.format(os.environ.get('ACCESS'), os.environ.get('SECRET'), projectDetails.get('data'), projectDetails.get('scratch'), 'https://github.com/UVA-DSI/Open-Data-Lab.git')
+                     """.format(os.environ.get('ACCESS'), os.environ.get('SECRET'), projectDetails['data-bucket'], projectDetails['scratch-bucket'], projectDetails['github'])
     
                      
                      
                      
                      
     instance = subnet.create_instances(
-        ImageId = 'ami-b70554c8',
-        InstanceType = 't2.nano',
+        ImageId = projectDetails['ImageId'],#'ami-b70554c8',
+        InstanceType = projectDetails['InstanceType'],#'t2.nano',
         MaxCount = 1,
         MinCount = 1,
         KeyName = key_pair.name,
@@ -107,7 +110,7 @@ def lambda_handler(event, context):
     
     # Replace recipient@example.com with a "To" address. If your account 
     # is still in the sandbox, this address must be verified.
-    RECIPIENT = "lpa2a@virginia.edu" #"uva-dsi-opendatalab-request@virginia.edu"
+    RECIPIENT = projectDetails['email'] #"lpa2a@virginia.edu" #"uva-dsi-opendatalab-request@virginia.edu"
 
     # If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
     AWS_REGION = "us-east-1"
@@ -182,4 +185,5 @@ def lambda_handler(event, context):
         print("Email sent! Message ID:"),
         print(response['MessageId'])
         
-    return 0
+    return 'beta-test: '+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
+
