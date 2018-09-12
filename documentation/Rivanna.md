@@ -5,8 +5,8 @@ Rivanna provides a platform for high-performance parallel jobs, for high-through
 
 For more information about accessing and using Rivanna, see our [Getting Started Guide](https://arcs.virginia.edu/getting-started)."
 
-##
-Administrative allocations: Administrative allocations are granted by the research deans who provide funding for Rivanna. A minimum one-page proposal must be included with any type of administrative allocation request. Available to: Faculty and postdocs who require very large allocations. Choose one of the following administrative request options based on your school/college/organizational affiliation:
+## Administrative allocations
+Administrative allocations are granted by the research deans who provide funding for Rivanna. A minimum one-page proposal must be included with any type of administrative allocation request. Available to: Faculty and postdocs who require very large allocations. Choose one of the following administrative request options based on your school/college/organizational affiliation:
 
 * College of Arts and Sciences
 * School of Engineering and Applied Science
