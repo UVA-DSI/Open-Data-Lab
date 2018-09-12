@@ -10,5 +10,5 @@ For more information about accessing and using Rivanna, see our [Getting Started
 * [Contact Form](https://arcs.virginia.edu/secure/contact-form): send all questions through this form
 * [Rivanna Page](https://arcs.virginia.edu/rivanna): essential system info
 * [Computation Allocation page](https://arcs.virginia.edu/allocations)
-* [Storage](https://arcs.virginia.edu/storage)
-* [Storage](https://cadre.virginia.edu/service-detail/storage)
+* [Storage](https://arcs.virginia.edu/storage): through ARCS
+* [Storage](https://cadre.virginia.edu/service-detail/storage): all of UVA
