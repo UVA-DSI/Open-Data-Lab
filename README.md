@@ -20,10 +20,3 @@ Goals for closed beta:
 * Establish discovery platform
 * Being accumulating a corpus
 
-## Getting Started
-
-
-How to access:
-* [GitHub](documentation/GitHub_getting_a_repo.md)
-* [Storage](documentation/S3_uploading_datasets.md)
-* [Computation](documentation/EC2_request_cloud_computing.md)
