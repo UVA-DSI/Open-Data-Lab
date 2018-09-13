@@ -13,7 +13,12 @@ Goals:
 * Public engagement - Open data exploration pipelines based on open data are a powerful means to engage with the broader public, both around open data and data science in general and the issues that they can help address.
 * Broad Recognition - as a valuable community resource.
 
-Currently we are in closed beta testing. If you are interested in the project please watch us on github and email uva-dsi-opendatalab-request@virginia.edu. 
+Currently we are in closed beta testing. If you are interested in the project please watch us on github and email uva-dsi-opendatalab-request@virginia.edu.
+Goals for closed beta:
+* Establish storage platform
+* Establish computation platform
+* Establish discovery platform
+* Being accumulating a corpus
 
 ## Getting Started
 
