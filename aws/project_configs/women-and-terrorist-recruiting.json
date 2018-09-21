@@ -1,0 +1,9 @@
+{
+   "projectId": "watr",
+   "github": "",
+   "data-bucket": "odl-watr",
+   "scratch-bucket": "odl-watr-scratch",
+   "ImageId": "ami-b70554c8",
+   "InstanceType": "t3.medium",
+   "email": "mh4pk@virginia.edu"
+}
