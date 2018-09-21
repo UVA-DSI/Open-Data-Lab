@@ -11,7 +11,7 @@ You should receive two emails.
   
 2. An email verification email from Amazon SES
   * To be completed within 24 hours.
-  * If you miss the deadline you can email uva-dsi-opendatalab@virginia.edu to request a repeat
+  * If you miss the deadline you can email uva-dsi-opendatalab-request@virginia.edu to request a repeat
   * Complete this step before accessing the system
   
   
