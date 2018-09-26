@@ -5,6 +5,13 @@ Rivanna provides a platform for high-performance parallel jobs, for high-through
 
 For more information about accessing and using Rivanna, see our [Getting Started Guide](https://arcs.virginia.edu/getting-started)."
 
+## Allocation Types
+* Standard allocations: 50,000 SUs Available to faculty and post-docs using Rivanna for research.  
+* Administrative allocations: Administrative allocations are granted by the research deans who provide funding for Rivanna.
+* Allocation purchases: Time on Rivanna can also be purchased using a PTAO.
+* Staff allocations: 5,000 SUs and can be renewed annually. Available to: UVA staff, faculty, and post-docs to test whether Rivanna is appropriate for their research project.
+* Instructional allocations: Available to UVA instructors who are teaching a class or leading a training session. 
+
 ## Administrative allocations
 Administrative allocations are granted by the research deans who provide funding for Rivanna. A minimum one-page proposal must be included with any type of administrative allocation request. Available to: Faculty and postdocs who require very large allocations. Choose one of the following administrative request options based on your school/college/organizational affiliation:
 
