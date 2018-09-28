@@ -29,7 +29,11 @@ def lambda_handler(event, context):
     #if projectId is None or projectId=="None":
     #    return "Please Provide a Project Id"
 
-    projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
+    if 'projectID' in event:    
+        projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
+    else:
+        projectKey = 'open-data-lab.json'
+
     print(projectKey)
 
     s3_client = boto3.client('s3')
@@ -41,7 +45,7 @@ def lambda_handler(event, context):
         assert projectDetails is not None
     except AssertionError:
         return "Project Datails not found for project:{}".format(projectKey)
-
+        
     print(projectDetails['github'])
  
     # template UserData bash script to auto fusemount
@@ -186,4 +190,3 @@ def lambda_handler(event, context):
         print(response['MessageId'])
         
     return 'beta-test: '+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
-
