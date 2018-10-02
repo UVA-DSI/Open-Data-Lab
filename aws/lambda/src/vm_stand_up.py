@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     # TODO implement
     print('Hello from Lambda')
 #    print(event["queryStringParameters"]['projectID'])
-    
+    print(event)
 # generate a new key pair for EC2 instance
     key_name = 'key_'+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
 
@@ -29,9 +29,12 @@ def lambda_handler(event, context):
     #if projectId is None or projectId=="None":
     #    return "Please Provide a Project Id"
 
-    if 'projectID' in event:    
-        projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
+    if 'queryStringParameters' in event:
+        if 'projectID' in event['queryStringParameters']:
+            print('found projectID')
+            projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
     else:
+        print('failed to find project id')
         projectKey = 'open-data-lab.json'
 
     print(projectKey)
@@ -190,3 +193,4 @@ def lambda_handler(event, context):
         print(response['MessageId'])
         
     return 'beta-test: '+str(int(datetime.datetime.timestamp(datetime.datetime.now())))
+
