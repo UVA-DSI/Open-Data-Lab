@@ -5,5 +5,6 @@
    "scratch-bucket": "odl-scratch-test",
    "ImageId": "ami-b70554c8",
    "InstanceType": "t2.nano",
-   "email": "lpa2a@virginia.edu"
+   "email": "lpa2a@virginia.edu",
+   "maxNumInstances": "1"
 }

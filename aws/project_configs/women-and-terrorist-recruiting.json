@@ -3,7 +3,8 @@
    "github": "https://github.com/mojtaba-Hsafa/twitter_project",
    "data-bucket": "odl-watr",
    "scratch-bucket": "odl-watr-scratch",
-   "ImageId": "ami-b70554c8",
+   "ImageId": "ami-09f0be2e7a739216e",
    "InstanceType": "t3.medium",
-   "email": "mh4pk@virginia.edu"
+   "email": "mh4pk@virginia.edu",
+   "maxNumInstances": "1"
 }
