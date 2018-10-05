@@ -18,5 +18,5 @@ Goals for closed beta:
 * Establish storage platform
 * Establish computation platform
 * Establish discovery platform
-* Being accumulating a corpus
+* Accumulating a corpus of reference data
 
