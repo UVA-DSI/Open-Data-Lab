@@ -16,8 +16,8 @@ response = requests.post('https://pish6mpnr0.execute-api.us-east-1.amazonaws.com
                         auth=auth,
                         params={'projectID':sys.argv[1]})
 
-#print(response.content)
-#print("status code: {}".format(response.status_code))
+print(response.content)
+print("status code: {}".format(response.status_code))
 
 print("Please check your email for connection information.")
 print("It may take a minute before your VM is ready for use.")
