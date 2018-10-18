@@ -12,5 +12,7 @@ Notes taken while Pete explains the system to Daniel on Oct 18, 2018.
     - has the code ODL-XXXX, where XXXX stands for some identifier
   - Pete creates a group with permissions for everyone who's going to be part of the project
   - Pete creates the users within the group
-  - Pete sends link to console to the new users
-  
+  - Pete sends link to console to the new users, with temporary password
+  - user logs in and sets a new password
+- 
+
