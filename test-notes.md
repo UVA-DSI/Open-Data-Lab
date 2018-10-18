@@ -15,6 +15,9 @@ Notes taken while Pete explains the system to Daniel on Oct 18, 2018.
   - Pete sends link to console to the new users, with temporary password
   - user logs in and sets a new password
 - Pete creates a computer for the user(s)
-  - computer can only be seen if user is logged in to the correct region
+  - computer can only be seen if user is logged in to the correct region (N. Virginia for DSI)
 - when logged in, search under Services for "SageMaker"
+- under SageMaker, click on "Notebook instances" in the left sidebar
+- users pick their XXXX project from the list
+  - hitting "Open" opens a Jupyter notebook ready to be run
 
