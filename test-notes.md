@@ -14,5 +14,7 @@ Notes taken while Pete explains the system to Daniel on Oct 18, 2018.
   - Pete creates the users within the group
   - Pete sends link to console to the new users, with temporary password
   - user logs in and sets a new password
-- 
+- Pete creates a computer for the user(s)
+  - computer can only be seen if user is logged in to the correct region
+- when logged in, search under Services for "SageMaker"
 
