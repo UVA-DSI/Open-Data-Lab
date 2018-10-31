@@ -1,7 +1,7 @@
 {
    "projectId": "open-data-lab",
    "github": "https://github.com/UVA-DSI/Open-Data-Lab.git",
-   "data-bucket": "odl-readonly-test",
+   "data-bucket": "odl-hmtt",
    "scratch-bucket": "odl-scratch-test",
    "ImageId": "ami-b70554c8",
    "InstanceType": "t2.nano",
