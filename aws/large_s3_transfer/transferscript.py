@@ -22,7 +22,8 @@ if True:
         filename = file[file.rfind('hmri-results/')+13:]
         print('copying {}'.format(filename))
         cmd1 = '{}'.format("aws s3 cp s3://hmri-results/{} . --profile uva_s3".format(filename))
-        cmd2 = '{}'.format("aws s3 cp {} s3://odl-hmtt/{} --profile odl".format(filename,filename))
-        print(cmd1,cmd2)
-        os.system(cmd1)
+        cmd2 = '{}'.format("aws s3 cp {} s3://odl-hmtt/{} --profile odl".format(filename[filename.rfind('/')+1:],filename))
+        print(cmd1)
+        #os.system(cmd1)
+        print(cmd2)
         os.system(cmd2)
