@@ -13,12 +13,13 @@ for file in files:
     files2.append(file[:-1])
 
 
-files2 = files2[0:1]
-print(files2)
+files2 = files2[2:]
+#print(files2)
 
 
 if True:
     for file in files2:
+	print('copying {} of {}'.format(files2.index(file),tot))
         filename = file[file.rfind('hmri-results/')+13:]
         print('copying {}'.format(filename))
         cmd1 = '{}'.format("aws s3 cp s3://hmri-results/{} . --profile uva_s3".format(filename))
