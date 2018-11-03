@@ -4,9 +4,14 @@
 
 ## Introduction
 
-The Open Data Lab is an initiative to provide infrastructure for reproducible workflows around open data. It is spearheaded by the Data Science Institute at the University of Virginia. Partner organizations include: the UVA library, the Center for Open Science, and the Public Library of Science. 
+The Open Data Lab is an initiative to provide infrastructure for reproducible workflows around open data. It is spearheaded by the Data Science Institute at the University of Virginia. Partner organizations include: the UVA library, the Center for Open Science, and the Public Library of Science.
 
-Goals:
+## Getting Started
+* For any and all questions please email uva-dsi-opendatalab-request@virginia.edu
+* To be added to our mailing list please [fill out this form (< 30 seconds)](https://docs.google.com/forms/d/e/1FAIpQLSdkWYOUKrxvkacqrFbG3aHu8dC4I7EAs8pO0_-u3hyFdrtREg/viewform).
+* Currently we are in closed Beta and serve the Data Science Institute. To express interest in working with the Open Data Lab please [fill out this form (< 5 minutes)](https://goo.gl/forms/aXNwlxiSLXCyfDRe2).
+
+## Goals:
 * Reference Data - Provision of a large corpus of open research and other data (CC0) and associated analytics (OSI-approved licence) across disciplines to be an exemplar for the representation of open structured and unstructured reference data.
 * Training - Use the reference data and analytics to train the next generation of data scientists and raise literacy around data at UVA and elsewhere.
 * Reproducibility - Facilitate scientific reproducibility through execution of workflows associated with the data and analytics.
