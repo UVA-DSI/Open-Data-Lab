@@ -13,7 +13,7 @@ for file in files:
     files2.append(file[:-1])
 
 
-files2 = files2[3840:3842]
+files2 = files2[3841:3843]
 #print(files2)
 
 
