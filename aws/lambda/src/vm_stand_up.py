@@ -35,7 +35,8 @@ def lambda_handler(event, context):
             projectKey = str(event["queryStringParameters"]['projectID'])+'.json'
     else:
         print('failed to find project id')
-        projectKey = 'open-data-lab.json'
+        #projectKey = 'open-data-lab.json'
+        projectKey = 'dominion.json'
 
     print(projectKey)
 
@@ -68,9 +69,9 @@ def lambda_handler(event, context):
                      touch /etc/passwd-s3fs
                      echo {}:{} | tee /etc/passwd-s3fs
                      chmod 400 /etc/passwd-s3fs
-                     s3fs {} /home/ec2-user/data -o allow_other,use_cache=/tmp &> /home/ec2-user/mount1.log
+                     s3fs {} /home/ec2-user/data -o allow_other,use_cache=/tmp
                      sudo chmod -R 444 /home/ec2-user/data/*
-                     s3fs {} /home/ec2-user/scratch -o allow_other,use_cache=/tmp &> /home/ec2-user/mount2.log
+                     s3fs {} /home/ec2-user/scratch -o allow_other,use_cache=/tmp
                      sudo chmod -R 777 /home/ec2-user/scratch/*
                      
                      echo 'git clone {}' >> /home/ec2-user/.bash_profile
@@ -87,15 +88,14 @@ def lambda_handler(event, context):
     
                      
                      
-                     
-                     
     instance = subnet.create_instances(
         ImageId = projectDetails['ImageId'],#'ami-b70554c8',
         InstanceType = projectDetails['InstanceType'],#'t2.nano',
         MaxCount = 1,
         MinCount = 1,
         KeyName = key_pair.name,
-        UserData = init_script
+        UserData = init_script,
+        BlockDeviceMappings=[{"DeviceName": "/dev/xvda","Ebs" : { "VolumeSize" : 100 }}]
     )
     
     
@@ -148,7 +148,7 @@ def lambda_handler(event, context):
     print("ip check",publicIp)
     
     # The email body for recipients with non-HTML email clients.
-    BODY_TEXT = ("Open Data Lab VM for project TEST is ready.\r\n"
+    BODY_TEXT = ("Open Data Lab VM for project {0} is ready.\r\n".format(projectKey)
                  "Step 1. Copy the contents below mark\r\n"
                  "Step 2. Paste into terminal and execute\r\n"
                  "Step 3. Execute connect.sh\r\n"
