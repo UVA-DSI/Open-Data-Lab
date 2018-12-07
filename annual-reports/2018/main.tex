@@ -1,6 +1,11 @@
 \documentclass[12pt,letterpaper]{report} % a4paper
 
-% \usepackage{feynmp}
+% packages
+\usepackage{graphicx}
+
+% variables
+\newcommand{\picSize}{0.19\textwidth}
+\newcommand{\textSize}{0.79\textwidth}
 
 % define the title
 \title{Open Data Lab Annual Report - 2018}
@@ -14,13 +19,14 @@
 \maketitle
 
 % introduction
+% include content
+\chapter*{The Team}  \input{team.tex} % People working on project, alphabetical
+
+\chapter*{Letter from the editor}  \input{letter.tex} % Mission and vision and philosophy
 
 % insert the table of contents
 \tableofcontents
 \pagebreak
-
-% include content
-\chapter*{Letter from the editor}  \input{letter.tex} % Mission and vision and philosophy
 
 \chapter{Overview} \input{overview.tex}
 
