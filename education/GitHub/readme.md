@@ -6,7 +6,7 @@
 
 ## Glossary
 * git: version control software, distributed model <img src="images/Git-Logo-2Color.png" width="128">
-* github: a for profit company owned by microsoft <img src="images/github-logo.png" width="128">
+* github: a for profit company owned by microsoft <img src="images/github-logo.png" width="128"><img src="images/githublogo.png" width="128">
 * repository: aka repo - a record of all changes to specified files <img src="github-logo.png" width="128">
 * commit: one change record <img src="github-logo.png" width="128">
 * remote: a non local repo <img src="github-logo.png" width="128">
