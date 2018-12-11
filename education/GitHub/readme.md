@@ -19,7 +19,7 @@
 ## Introduction
 <img src="images/cartoon1.gif" width="512">
 
-<img src='images/cartoon2.png' width="512">
+<img src='images/cartoon2.png' width="412">
 
 ## Resources
 * https://github.com/alonzi/git-intro
