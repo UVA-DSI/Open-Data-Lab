@@ -17,8 +17,8 @@
 | pull request| a request to the remote of your fork to 'pull' your changes |<img src="images/Octicons-git-pull-request.svg" width="76">|
 
 ## Introduction
-![A story told in filenames](http://phdcomics.com/comics/archive.php?comicid=1323)
-![How do we use it?](https://xkcd.com/1597/)
+[A story told in filenames](http://phdcomics.com/comics/archive.php?comicid=1323)
+[How do we use it?](https://xkcd.com/1597/)
 
 
 ## Resources
