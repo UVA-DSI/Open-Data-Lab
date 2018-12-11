@@ -2,6 +2,7 @@
 
 ## Contents
 * [Glossary](#glossary)
+* [Introduction](#introduction)
 * [Resources](#resources)
 
 ## Glossary
@@ -14,6 +15,11 @@
 | remote| a non local repo |n/a|
 | fork| a repo and a pointer to the remoted it 'forked' from |<img src="images/fork.png" width="76">|
 | pull request| a request to the remote of your fork to 'pull' your changes |<img src="images/Octicons-git-pull-request.svg" width="76">|
+
+## Introduction
+![A story told in filenames](http://phdcomics.com/comics/archive.php?comicid=1323)
+![How do we use it?](https://xkcd.com/1597/)
+
 
 ## Resources
 * https://github.com/alonzi/git-intro
