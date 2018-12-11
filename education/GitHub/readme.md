@@ -5,7 +5,7 @@
 * [Resources](#resources)
 
 ## Glossary
-* git: version control software, distributed model ![](images/Git-Logo-2Color.png)
+* git: version control software, distributed model ![](images/Git-Logo-2Color.png =100x)
 * github: a for profit company owned by microsoft
 * repository: aka repo - a record of all changes to specified files
 * commit: one change record
