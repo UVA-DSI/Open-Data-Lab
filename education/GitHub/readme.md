@@ -18,9 +18,11 @@
 
 ## Introduction
 ![](images/cartoon1.gif)
+
 [A story told in filenames](http://phdcomics.com/comics/archive.php?comicid=1323)
 
-![](images/cartoon.png)
+![](images/cartoon2.png)
+
 [How do we use it?](https://xkcd.com/1597/)
 
 
