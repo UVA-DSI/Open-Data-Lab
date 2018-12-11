@@ -4,6 +4,7 @@
 * [Glossary](#glossary)
 * [Introduction](#introduction)
 * [Resources](#resources)
+* [User Archetypes](#user-archetypes)
 
 ## Glossary
 |Term   | Definition  | Image  |
