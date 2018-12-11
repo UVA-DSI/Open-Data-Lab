@@ -26,7 +26,7 @@
 ## User Archetypes
 | Role | Example | Permissions |
 |---|---|---|
-| Repository Manager | PI for project | full: decide what pull requests are accepted |
+| Repository Manager | PI for project | read & write: decide what pull requests are accepted |
 | Collaborator | Anyone who is working on the project | read: make suggestions via pull request |
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
