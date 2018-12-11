@@ -21,6 +21,15 @@
 
 <img src='images/cartoon2.png' width="412">
 
+### GitHub provides a browser based interface to use version control!
+
+## User Archetypes
+| Role | Example | Permissions |
+|---|---|---|
+| Repository Manager | PI for project | full: decide what pull requests are accepted |
+| Collaborator | Anyone who is working on the project | read: make suggestions via pull request |
+| External Audience | Conference attendee / Reviewer / Funding Angency| read |
+
 ## Resources
 * https://github.com/alonzi/git-intro
 
