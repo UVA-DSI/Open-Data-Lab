@@ -1,8 +1,8 @@
 # GitHub
 
 ## Contents
-* [Glossary](#resources)
-* [Resources](#glossary)
+* [Glossary](#glossary)
+* [Resources](#resources)
 
 ## Glossary
 
