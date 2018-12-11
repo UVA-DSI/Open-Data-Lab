@@ -17,11 +17,9 @@
 | pull request| a request to the remote of your fork to 'pull' your changes |<img src="images/Octicons-git-pull-request.svg" width="76">|
 
 ## Introduction
-<center>
 <img src="images/cartoon1.gif" width="512">
 
 <img src='images/cartoon2.png' width="412">
-</center>
 
 ## Resources
 * https://github.com/alonzi/git-intro
