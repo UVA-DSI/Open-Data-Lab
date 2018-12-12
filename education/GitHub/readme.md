@@ -31,6 +31,16 @@
 | Collaborator | Anyone who is working on the project | read: make suggestions via pull request |
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
+## How to compare revisions
+* use the following URL with two commit hashes
+* https://github.com/$USER/$REPO/compare/$REV_A...$REV_B
+* eg: https://github.com/alonzi/feynman/compare/b08a2a61bb96ccfea3127a92a8c356df3f3b6f0e...master
+
+## Useful Tricks
+* https://help.github.com/articles/syncing-a-fork/
+* https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+* 
+
 ## Resources
 * https://github.com/alonzi/git-intro
 * https://github.com/git/git
