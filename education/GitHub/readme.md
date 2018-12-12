@@ -29,6 +29,8 @@
 
 ## GitHub provides a browser based interface to use version control!
 <img src='images/futurememe.jpg' width='800'>
+* Every revision has a URL - you can publish a revision by URL and keep developing
+* You can always revert to a previous revision - total freedom to try new things without breaking your code
 
 # User Archetypes
 | Role | Example | Permissions |
