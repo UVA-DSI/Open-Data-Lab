@@ -82,6 +82,9 @@
 # Summary
 <img src='images/github-workflow-mod.png' width='1000'>
 
+* Red: Master repo - Repo Manager approves changes via pull request from collaborators
+* Blue: Fork repo - Used by collaborators to develop code and submit changes via pull request
+
 ## How to compare revisions
 * use the following URL with two commit hashes
 * https://github.com/$USER/$REPO/compare/$REV_A...$REV_B
