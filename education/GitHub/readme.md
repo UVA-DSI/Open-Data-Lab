@@ -25,7 +25,7 @@
 ## GitHub provides a browser based interface to use version control!
 <img src='images/futurememe.jpg' width='600'>
 
-## User Archetypes
+# User Archetypes
 | Role | Example | Permissions |
 |---|---|---|
 | Repository Manager | PI for project | read & write: decide what pull requests are accepted |
@@ -50,6 +50,23 @@
       * click on any file to see it
       * README.MD: this is a special file. GitHub displays it automagically
 ### Does anyone want to make a change?
+
+# Development Workflow: User Archetype - Collaborator
+1. Fork a repo (on the website)
+2. Download to local machine (on the website)
+3. Develop the code (on your computer)
+4. Upload to GitHub (on the website)
+5. Create a pull request (on the website)
+
+# Exercise 2 - Pull Request on Solstice Party
+  * Fork the repo - button in upper right hand corner
+  * Look at upper left corner and note the new symbol and pointer
+  * **This is a completely functional independent repo** - nb: there is now a pointer
+  * Use the Green button to download a zip file of the repo
+  * On your machine edit a file
+  * On the web browser use the 'Upload files' to upload your changed file
+  * Click "New Pull Request" - instructions for filling this out will be demonstrated
+
 
 ## How to compare revisions
 * use the following URL with two commit hashes
