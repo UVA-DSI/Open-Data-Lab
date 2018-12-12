@@ -7,6 +7,7 @@
 * [Exercise - Explore a Repository](#Exercise-1---Explore-a-Repository)
 * [Development Workflow](#Development-Workflow-User-Archetype---Collaborator)
 * [Exercise - Suggest a change](#Exercise-2---Suggest-a-change-to-a-Repository)
+* [Summary](#summary)
 * [Compare revisions](#How-to-compare-revisions)
 * [Tricks](#Useful-Tricks)
 * [Resources](#Resources)
