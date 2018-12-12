@@ -55,7 +55,7 @@
       * icon means this is a repo
       * user/repo-name
       * like a compass - on the website look here to tell where you are
-    * **Big green button** on the right hand side says "Clone or Download" 
+    * **Green button** on the right hand side says "Clone or Download" 
       * This is how you pull down the files
       * 3 options - use git and download zip are the most common, there is also an app
     * **List of Files**
