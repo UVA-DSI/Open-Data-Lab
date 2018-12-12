@@ -32,6 +32,24 @@
 | Collaborator | Anyone who is working on the project | read: make suggestions via pull request |
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
+# Exercise 1 - Solstice Party
+Roles
+  * Repo Manager: Pete
+  * Collaborators: Workshop attendees
+Todo
+  * goto: https://github.com/alonzi/solstice-party-cookies
+  * Let's look around
+    * Upper Left Corner: notebook icon next to 'alonzi/solstice-party-cookies'
+      * icon means this is a repo
+      * user/repo-name
+      * like a compass - on the website look here to tell where you are
+    * Big green button on the right hand side says "Clone or Download" 
+      * This is how you pull down the files
+      * 3 options - use git and download zip are the most common, there is also an app
+    * List of files
+      * click on any file to see it
+      * README.MD: this is a special file. GitHub displays it automagically
+
 ## How to compare revisions
 * use the following URL with two commit hashes
 * https://github.com/$USER/$REPO/compare/$REV_A...$REV_B
