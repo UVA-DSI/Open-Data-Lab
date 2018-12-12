@@ -93,3 +93,6 @@
 * https://github.com/git/git
 * https://git-scm.com/downloads
 
+# Extras
+* How to make a repo
+
