@@ -3,7 +3,6 @@
 ## Contents
 * [Glossary](#glossary)
 * [Introduction](#introduction)
-* [Resources](#resources)
 * [User Archetypes](#user-archetypes)
 * [Exercise - Explore a Repository](#Exercise-1---Explore-a-Repository)
 * [Development Workflow](#Development-Workflow-User-Archetype---Collaborator)
