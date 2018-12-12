@@ -49,7 +49,7 @@
     * **List of Files**
       * click on any file to see it
       * README.MD: this is a special file. GitHub displays it automagically
-  *
+  * **Does anyone want to make a change?**
 
 ## How to compare revisions
 * use the following URL with two commit hashes
