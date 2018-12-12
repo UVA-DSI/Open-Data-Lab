@@ -17,7 +17,7 @@
 |Term   | Definition  | Image  |
 |---|---|:---:|
 | git  | version control software, distributed model  | <img src="images/Git-Logo-2Color.png" width="128">  | 
-| github | a for profit company owned by microsoft | <img src="images/github-logo.png" width="128"><img src="images/githublogo.png" width="76"> |
+| github | a for-profit company owned by microsoft | <img src="images/github-logo.png" width="128"><img src="images/githublogo.png" width="76"> |
 | repository/repo| a record of all changes to specified files |<img src="images/repo.svg" width="76">|
 | commit| one change record |<img src="images/commit.png" width="76">|
 | remote| a non local repo |n/a|
