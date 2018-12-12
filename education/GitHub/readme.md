@@ -32,7 +32,7 @@
 | Collaborator | Anyone who is working on the project | read: make suggestions via pull request |
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
-# Exercise 1 - Solstice Party
+# Exercise 1 - Explore a Repository
 ### Roles
   * Repo Manager: Pete
   * Collaborators: Workshop attendees
@@ -58,7 +58,7 @@
 4. Upload to GitHub (on the website)
 5. Create a pull request (on the website)
 
-# Exercise 2 - Pull Request on Solstice Party
+# Exercise 2 - Suggest a change to a Repository
 <img src='images/fork-example.png' width='1000'>
 
 1. Fork the repo (button in upper right hand corner)
