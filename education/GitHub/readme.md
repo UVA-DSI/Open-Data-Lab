@@ -33,4 +33,6 @@
 
 ## Resources
 * https://github.com/alonzi/git-intro
+* https://github.com/git/git
+* https://git-scm.com/downloads
 
