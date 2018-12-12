@@ -79,6 +79,8 @@
 4. On the web browser use the 'Upload files' to upload your changed file
 5. Click "New Pull Request" - instructions for filling this out will be demonstrated
 
+# Summary
+<img src='images/github-workflow-mod.png' width='1000'>
 
 ## How to compare revisions
 * use the following URL with two commit hashes
