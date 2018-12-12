@@ -39,7 +39,6 @@
 ## Useful Tricks
 * https://help.github.com/articles/syncing-a-fork/
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
-* 
 
 ## Resources
 * https://github.com/alonzi/git-intro
