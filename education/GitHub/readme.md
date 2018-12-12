@@ -89,7 +89,7 @@
 
 ## How to compare revisions
 * use the following URL with two commit hashes
-* https://github.com/$USER/$REPO/compare/$REV_A...$REV_B
+* https://github.com/$USER/$REPO/compare/$REV_A...$REV_B (nb: not a vaild link)
 * eg: https://github.com/alonzi/feynman/compare/b08a2a61bb96ccfea3127a92a8c356df3f3b6f0e...master
 
 ## Useful Tricks
