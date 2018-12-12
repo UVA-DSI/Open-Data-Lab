@@ -78,6 +78,7 @@
 ## Useful Tricks
 * https://help.github.com/articles/syncing-a-fork/
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+* You can edit a file in your repo through the browser interface (little pencil icon)
 
 ## Resources
 * https://github.com/alonzi/git-intro
