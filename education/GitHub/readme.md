@@ -33,10 +33,10 @@
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
 # Exercise 1 - Solstice Party
-Roles
+### Roles
   * Repo Manager: Pete
   * Collaborators: Workshop attendees
-Todo
+### Todo
   * goto: https://github.com/alonzi/solstice-party-cookies
   * Let's look around
     * Upper Left Corner: notebook icon next to 'alonzi/solstice-party-cookies'
