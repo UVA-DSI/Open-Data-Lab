@@ -37,18 +37,19 @@
   * Repo Manager: Pete
   * Collaborators: Workshop attendees
 ### Todo
-  * goto: https://github.com/alonzi/solstice-party-cookies
+  * Goto: https://github.com/alonzi/solstice-party-cookies
   * Look around
-    * Upper Left Corner: notebook icon next to 'alonzi/solstice-party-cookies'
+    * **Upper Left Corner:** notebook icon next to 'alonzi/solstice-party-cookies'
       * icon means this is a repo
       * user/repo-name
       * like a compass - on the website look here to tell where you are
-    * Big green button on the right hand side says "Clone or Download" 
+    * **Big green button** on the right hand side says "Clone or Download" 
       * This is how you pull down the files
       * 3 options - use git and download zip are the most common, there is also an app
-    * List of files
+    * **List of Files**
       * click on any file to see it
       * README.MD: this is a special file. GitHub displays it automagically
+  *
 
 ## How to compare revisions
 * use the following URL with two commit hashes
