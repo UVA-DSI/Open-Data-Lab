@@ -5,7 +5,7 @@
 * [Introduction](#introduction)
 * [User Archetypes](#user-archetypes)
 * [Exercise - Explore a Repository](#Exercise-1---Explore-a-Repository)
-* [Development Workflow](#Development-Workflow-User-Archetype---Collaborator)
+* [Development Workflow](#Development-Workflow-for-Collaborator-User-Archetype)
 * [Exercise - Suggest a change](#Exercise-2---Suggest-a-change-to-a-Repository)
 * [Summary](#summary)
 * Secondary Objectives
@@ -63,7 +63,7 @@
       * README.MD: this is a special file. GitHub displays it automagically
 ### Does anyone want to make a change?
 
-# Development Workflow User Archetype - Collaborator
+# Development Workflow for Collaborator User Archetype
 1. Fork a repo (on the website)
 2. Download to local machine (on the website)
 3. Develop the code (on your computer)
