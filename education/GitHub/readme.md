@@ -38,7 +38,7 @@
   * Collaborators: Workshop attendees
 ### Todo
   * goto: https://github.com/alonzi/solstice-party-cookies
-  * Let's look around
+  * Look around
     * Upper Left Corner: notebook icon next to 'alonzi/solstice-party-cookies'
       * icon means this is a repo
       * user/repo-name
