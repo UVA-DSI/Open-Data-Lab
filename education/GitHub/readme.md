@@ -59,6 +59,8 @@
 5. Create a pull request (on the website)
 
 # Exercise 2 - Pull Request on Solstice Party
+<img src='images/fork.png' width='700'>
+
 1. Fork the repo (button in upper right hand corner)
    * Look at upper left corner and note the new symbol and pointer
    * **This is a completely functional independent repo** - nb: there is now a pointer
