@@ -61,7 +61,8 @@
 # Exercise 2 - Pull Request on Solstice Party
   1. Fork the repo - button in upper right hand corner
   2. Look at upper left corner and note the new symbol and pointer
-    * **This is a completely functional independent repo** - nb: there is now a pointer
+  
+  --> **This is a completely functional independent repo** - nb: there is now a pointer
   4. Use the Green button to download a zip file of the repo
   5. On your machine edit a file
   6. On the web browser use the 'Upload files' to upload your changed file
