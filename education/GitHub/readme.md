@@ -8,9 +8,10 @@
 * [Development Workflow](#Development-Workflow-User-Archetype---Collaborator)
 * [Exercise - Suggest a change](#Exercise-2---Suggest-a-change-to-a-Repository)
 * [Summary](#summary)
-* [Compare revisions](#How-to-compare-revisions)
-* [Tricks](#Useful-Tricks)
-* [Resources](#Resources)
+* Secondary Objectives
+  * [Compare revisions](#How-to-compare-revisions)
+  * [Tricks](#Useful-Tricks)
+  * [Resources](#Resources)
 
 ## Glossary
 |Term   | Definition  | Image  |
