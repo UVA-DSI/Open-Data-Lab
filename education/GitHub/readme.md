@@ -23,6 +23,7 @@
 <img src='images/cartoon2.png' width="412">
 
 ## GitHub provides a browser based interface to use version control!
+<img src='images/futurememe.jpg' width='600'>
 
 ## User Archetypes
 | Role | Example | Permissions |
