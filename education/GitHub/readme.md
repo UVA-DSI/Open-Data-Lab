@@ -38,6 +38,8 @@
 | External Audience | Conference attendee / Reviewer / Funding Angency| read |
 
 # Exercise 1 - Explore a Repository
+<img src='repo-example.png' width='1000'>
+
 ### Roles
   * Repo Manager: Pete
   * Collaborators: Workshop attendees
