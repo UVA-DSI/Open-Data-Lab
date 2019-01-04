@@ -8,3 +8,4 @@ api_key.txt
 *synctex.gz
 *toc
 .DS_Store
+*.out
