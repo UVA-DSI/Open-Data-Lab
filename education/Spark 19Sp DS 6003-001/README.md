@@ -2,8 +2,8 @@
 
 ## Details
 ### Instructor: Pete Alonzi (LPA2A@VIRGINIA.EDU)
-### Jan 16,21,23,28,30: 12:00-12:50 EST
-### Dell 1, Room 105
+### Dates: Jan 16,21,23,28,30: 12:00-12:50 EST
+### Location: Dell 1, Room 105
 ### Spark is a popular tool for managing data at scale
 
 ## Outline
