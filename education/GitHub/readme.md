@@ -102,6 +102,9 @@
 * https://github.com/alonzi/git-intro
 * https://github.com/git/git
 * https://git-scm.com/downloads
+* https://github.com/Daniel-Mietchen/learning2code/blob/master/version-control.md#platforms
+* https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947
+* https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668
 
 # Extras
 * How to make a repo
