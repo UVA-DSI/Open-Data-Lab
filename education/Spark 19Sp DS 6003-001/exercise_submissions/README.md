@@ -4,6 +4,9 @@
 * Exercise Released: Jan 23 (Wednesday)
 * Exercise Due: 9am Jan 30 (Wednesday)
 * Submissions are made to two places:
-  * This repo: via pull request (all materials including code and slides)
+  * This repo: via pull request 
+    * all materials including code and slides
+    * create a subfolder for your materials (eg: LPA2A)
+    * the subfolder is named with your UVA computing ID
   * Collab submission: (graded portion only)
 * 
