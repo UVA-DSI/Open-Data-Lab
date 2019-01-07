@@ -9,6 +9,6 @@
 ## Outline
 * Jan 16: Setting up your spark environment and storing data
 * Jan 21: Understanding Data Frames (they are different from Python/R)
-* Jan 23: ML pipelining in Spark
-* Jan 28: Visualization and Exercise Discussion (Exercise released)
+* Jan 23: ML pipelining in Spark and Exercise Description (Exercise released)
+* Jan 28: Visualization and Exercise Discussion 
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
