@@ -1,11 +1,27 @@
+This year saw great progress for the Open Data Lab. Early on there were weekly meetings to define goals and objectives. Those meetings lead to implementation of several areas and this chapter presents the key developments during 2018.
+
 \section{Phase 1 - Closed $\beta$}
+The first decision made for the Open Data Lab was to implement a staged approach. Section~\ref{phases} summarizes the whole scope. This section discusses the state of the closed beta (Phase I). The user base for this phase is predominantly the Data Science Institute. There were 42 participants ranging from students, to faculty, to staff. There were also 26 workshop attendees ranging from a diverse selection of UVA researchers to community members.
+The primary goal of this phase is to test different technology solutions to anticipated needs (see section~\ref{techsolu}. Those range from data storage to computation to discovery to pedagogy, and so on. Of particular note was the wild success of implementing Project Jupyter. The tools developed by this project served many roles and were excelent (details in section~\ref{projectjupyter}.
+This phase will run until several criteria are met. The first is the establishment of a new funding model that will cover the scope of the open beta test. The second is the acquisition of new staff. Currently the Open Data Lab has a bus factor of one and that is not acceptable for phase 2. There are other criteria to be developed the chief of which is to scope the open beta.
+
 \section{Establishment of User base}
-\section{Technology exploration}
+This year saw the birst of the Open Data Lab and growth to include 68 users. Those users take various form from capstone research programs at the graduate and undergraduate level to full fleged dissertation research. Some of the users involved are dealing with datasets that now reside within the Open Data Lab. Currently those datasets and under tight restriction as we explore proper security protocols. There is also a contingent of undergrad and graduate students that are part of data science clubs at UVA who gain access to resources through the Open Data Lab.
+
+It is important to understand that the technology behind the system is not the driver of the system. The needs of the user are. Right now the closed beta format allows us to interview new users and tailor a program to them. Sometimes we get the resource wrong and adjustments have to be made.
+Regarding data storage the use of S3 storage from Amazon Web Services has served a broad selection of users well. Recent developments in AWS object storage technology enable users to use it as if it were block storage. As a result S3 has proved an effective solution both for large scale data storage as well as database query repositories.
+Providing computational resources has been guided by the user base as well. As the base grew it became clear that the notebook technology developed by Project Jupyter was highly effective and actually resulted in more people volunteering for the closed beta test. The use of that technology helped bring users into the system.
+
+
+\section{Technology Exploration}
+\label{techsolu}
+Many different technologies were tested in 2018. Many options using Amazon Web Services were explored and almost to a point those services were excellent. Local UVA resources were also used and in particular the UVA HPC portal developed out of the VP-IT's office is phenomenal. Collaboration is also underway with the UVA library regarding the discovery component of the Open Data Lab and the implementation of Harvard's Datavese, known locally at UVA as Libra. For version control and sharing purposed GitHub was evaluated.
 
 \subsection{Amazon Web Services}
 \subsubsection{S3}
 \subsubsection{EC2}
 \subsubsection{SageMaker (Jupyter)}
+\label{projectjupyter}
 \subsubsection{IAM}
 \subsubsection{API Gateway}
 \subsubsection{Architecture Diagrams}
@@ -18,7 +34,19 @@ https://aws.amazon.com/premiumsupport/compare-plans/
 \end{verbatim}
 
 \subsection{Local UVA - Rivanna and Ivy}
-\subsection{Github}
+The local computational resources at UVA are facilitated through the office of Vice President for IT. That group is dedicated and hard working and provides great resources to the local UVA community. We have established a working relationship with them and discuss technical problems and solutions. Independently we arrived at the utility of Project Jupyter.
+These solutions are for UVA personnel and their collaborators and as such will not scale to later phases of the Open Data Lab project. However for the closed and open beta it is a great resource. Furthermore their technical expertise will be invaluable to the Open Data Lab regardless of phase.
+
+\subsection{GitHub}
+GitHub is the most broadly adopted cloud platform for version control. Therefore we evaluated it first. The utility for managing repositories is fully mature. The collaborative features focused around the fork and pull request paradigm are excellent. GitHub also has project level capability with issue tracking and team/permission functionality for managing permissions and progress. We have been extremely pleased with the capabilities of GitHub. The only motivation to try other solutions is for the sake of due diligence.
+
+Concerning the acquisition by Microsoft: Many have raised the issue that GitHub may not be the appropriate solution now that Microsoft has acquired GitHub. However the recent track record of Microsoft is to not meddle with projects like GitHub but rather to protect them. Additionally most users use other Microsoft products. What's more the Open Data Lab also relies heavily on Amazon.
+
+\section{Upcoming Technical Exploration}
+The following sections describe exploratory work that is on the schedule. There is more to be done beyond this list but not scheduled.
 \subsection{Dataverse}
+A framework has been outlined to use Dataverse as the discovery mechanism for the Open Data Lab. In this system a metadata entry will be made in the Dataverse containing all of the usual materials. However the final piece with the datafiles will contain pointers to the data and projects within the Open Data Lab. Dataverse is not configured for colocating computation resources with the data resources. The pilot of this test will be with the Libra project from the UVA Library. Currently that system is undergoing an upgrade and once there is a stable release exploration will commence.
 \subsection{Spark}
+The first scale data solution the Open Data Lab will explore is Spark. Preliminary work so far as been the development of a introductory workshop on the technology (available on the Open Data Lab github repository). A second pedagogical series will be presented early in 2019 and will lead to testing different technical solutions.
 \subsection{SPARQL Endpoint}
+The numismatic dataset will be accessible through a SPARQL endpoint. This exploration is in the early stage and has not matured to the point of evaluation. The next annual report will have a full breakdown of the best way to treat this form of data and delivery.
