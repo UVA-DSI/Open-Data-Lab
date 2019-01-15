@@ -26,3 +26,6 @@ There is one assignment for this series. It is a practical implementation of the
 
 ## S3 bucket for class
 * odl-spark19spds6003-001
+
+## Link to access Jupyter Server
+* https://open-data-lab.signin.aws.amazon.com/console (IAM use name is your UVA id)
