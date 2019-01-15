@@ -23,3 +23,6 @@ There is one assignment for this series. It is a practical implementation of the
 ### From Databricks
 * [Databricks resources](https://docs.databricks.com/index.html)
 * [Matplotlib and ggplot example](https://docs.databricks.com/user-guide/visualizations/matplotlib-and-ggplot.html?1)
+
+## S3 bucket for class
+* odl-spark19spds6003-001
