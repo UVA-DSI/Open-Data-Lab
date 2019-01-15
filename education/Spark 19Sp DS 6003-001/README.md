@@ -23,6 +23,9 @@ There is one assignment for this series. It is a practical implementation of the
 ### From Databricks
 * [Databricks resources](https://docs.databricks.com/index.html)
 * [Matplotlib and ggplot example](https://docs.databricks.com/user-guide/visualizations/matplotlib-and-ggplot.html?1)
+### For when you're ready for EMR
+* [Using Apache Spark with Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/apache-spark.html)
+* [Build Amazon SageMaker notebooks backed by Spark in Amazon EMR](https://aws.amazon.com/blogs/machine-learning/build-amazon-sagemaker-notebooks-backed-by-spark-in-amazon-emr/)
 
 ## S3 bucket for class
 * odl-spark19spds6003-001
