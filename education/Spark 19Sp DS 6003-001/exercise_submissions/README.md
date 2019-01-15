@@ -11,3 +11,5 @@
   
 ## Exercise Prompt
 
+## Assessment Criteria
+Full credit will be given for assignments submitted in full and on time. No credit will be given for late submissions.
