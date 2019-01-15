@@ -20,6 +20,6 @@ There is one assignment for this series. It is a practical implementation of the
 * [DSI Practice class spark resources 2018](https://github.com/alonzi/spark)
 * [Spark Python API Docs](https://spark.apache.org/docs/latest/api/python/index.html#)
 * [Bonus: Twitter Example - Not in scope of this workshop](https://www.toptal.com/apache/apache-spark-streaming-twitter?!)
-### Some Databricks Resources
+### From Databricks
 * [Databricks resources](https://docs.databricks.com/index.html)
 * [Matplotlib and ggplot example](https://docs.databricks.com/user-guide/visualizations/matplotlib-and-ggplot.html?1)
