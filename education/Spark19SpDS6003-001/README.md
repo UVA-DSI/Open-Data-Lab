@@ -32,3 +32,6 @@ There is one assignment for this series. It is a practical implementation of the
 
 ## Link to access Jupyter Server
 * https://open-data-lab.signin.aws.amazon.com/console (IAM use name is your UVA id)
+
+##
+* Example dataset: https://www.kaggle.com/city-of-seattle/seattle-checkouts-by-title 
