@@ -14,3 +14,10 @@
 
 ## Assessed Assignments
 There is one assignment for this series. It is a practical implementation of the techniques learned in class. The assignment is due on Jan 30 at 0900 (aka 9am). Submission details are [here](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark%2019Sp%20DS%206003-001/exercise_submissions/README.md). 
+
+## Resources
+* [UVA Library Spark Workshop](https://github.com/alonzi/spark-intro)
+* [DSI Practice class spark resources 2018](https://github.com/alonzi/spark)
+* [Spark Python API Docs](https://spark.apache.org/docs/latest/api/python/index.html#)
+* [Matplotlib and ggplot example](https://docs.databricks.com/user-guide/visualizations/matplotlib-and-ggplot.html?1)
+* [Bonus: Twitter Example - Not in scope of this workshop](https://www.toptal.com/apache/apache-spark-streaming-twitter?!)
