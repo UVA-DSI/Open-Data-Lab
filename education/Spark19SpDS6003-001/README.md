@@ -17,7 +17,7 @@
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
 
 ## Assignments
-There is one assignment for this series. It is a practical implementation of the techniques learned in class. The assignment is due on Jan 30 at 0900 (aka 9am). Submission details are [here](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark%2019Sp%20DS%206003-001/exercise_submissions/README.md). 
+There is one assignment for this series. It is a practical implementation of the techniques learned in class. The assignment is due on Jan 30 at 0900 (aka 9am). Submission details are [here](https://github.com/UVA-DSI/Open-Data-Lab/tree/master/education/Spark19SpDS6003-001/exercise_submissions). 
 
 ## Resources
 * [UVA Library Spark Workshop](https://github.com/alonzi/spark-intro)
