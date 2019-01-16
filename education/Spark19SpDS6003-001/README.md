@@ -8,6 +8,7 @@
 
 ## Outline
 * Jan 16: Setting up your spark environment and storing data and Exercise Description (Exercise released)
+  * Goals: Answer "What is Spark?" and "What should I use Spark for?"
   * [intro to spark](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/spark_intro.md) --> [setup spark notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/setup.ipynb)
   * [intro to efficient storage](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/efficient_storage.md) --> [store data for processing notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/data_storage.ipynb)
   * [exercise details](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/exercise_submissions/README.md)
