@@ -19,3 +19,6 @@
 2. Use the context to create data frames
 3. Apply functional operations to data frames to perform analysis
 
+* nb: we will get into data frame operations next time
+* nb: we will get into other workflows (ML) the time after next
+
