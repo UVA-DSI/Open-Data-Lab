@@ -8,8 +8,8 @@
 
 ## Outline
 * Jan 16: Setting up your spark environment and storing data and Exercise Description (Exercise released)
-  * [setup spark](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/setup.ipynb)
-  * [store data for processing](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/data_storage.ipynb)
+  * [intro to spark](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/spark_intro.md) --> [setup spark notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/setup.ipynb)
+  * [intro to efficient storage](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/efficient_storage.md) --> [store data for processing notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/data_storage.ipynb)
   * [exercise details](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/exercise_submissions/README.md)
 * Jan 23: Understanding Data Frames (they are different from Python/R) 
 * Jan 28: ML pipelining in Spark - Visualization if time
