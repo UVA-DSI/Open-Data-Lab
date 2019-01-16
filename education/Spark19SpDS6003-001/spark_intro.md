@@ -22,5 +22,5 @@
 * nb: we will get into data frame operations next time
 * nb: we will get into other workflows (ML) the time after next
 
-## API
+## pyspark API
 * https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#module-pyspark.sql
