@@ -15,7 +15,7 @@
 * Jan 28: ML pipelining in Spark - Visualization if time
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
 
-## Assessed Assignments
+## Assignments
 There is one assignment for this series. It is a practical implementation of the techniques learned in class. The assignment is due on Jan 30 at 0900 (aka 9am). Submission details are [here](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark%2019Sp%20DS%206003-001/exercise_submissions/README.md). 
 
 ## Resources
@@ -30,11 +30,11 @@ There is one assignment for this series. It is a practical implementation of the
 * [Using Apache Spark with Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/apache-spark.html)
 * [Build Amazon SageMaker notebooks backed by Spark in Amazon EMR](https://aws.amazon.com/blogs/machine-learning/build-amazon-sagemaker-notebooks-backed-by-spark-in-amazon-emr/)
 
-## S3 bucket for class
+## S3 bucket
 * odl-spark19spds6003-001
 
-## Link to access Jupyter Server
+## Jupyter Server Link
 * https://open-data-lab.signin.aws.amazon.com/console (IAM use name is your UVA id)
 
-## Data
-* Example dataset: https://www.kaggle.com/city-of-seattle/seattle-checkouts-by-title 
+## Dataset example
+* https://www.kaggle.com/city-of-seattle/seattle-checkouts-by-title 
