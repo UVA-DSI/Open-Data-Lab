@@ -13,6 +13,8 @@
   * [intro to efficient storage](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/efficient_storage.md) --> [store data for processing notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/data_storage.ipynb)
   * [exercise details](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/exercise_submissions/README.md)
 * Jan 23: Understanding Data Frames (they are different from Python/R) 
+  * Goal: Understand dataframes
+  * [today's notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/dataframes.ipynb)
 * Jan 28: ML pipelining in Spark - Visualization if time
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
 
