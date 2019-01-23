@@ -15,7 +15,7 @@
 * Jan 23: Understanding Data Frames (they are different from Python/R) 
   * Goal: Understand dataframes
   * [today's notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/dataframes.ipynb)
-* Jan 28: ML pipelining in Spark - Visualization if time
+* Jan 28: ML pipelining in Spark
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
 
 ## Assignments
