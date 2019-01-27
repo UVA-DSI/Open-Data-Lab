@@ -17,6 +17,7 @@
   * [today's notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/dataframes.ipynb)
 * Jan 28: ML pipelining in Spark
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
+  * Mini Capstone Meeting: Is spark useful for our capstone project?
 
 ## Assignments
 There is one assignment for this series. It is a practical implementation of the techniques learned in class. The assignment is due on Jan 30 at 0900 (aka 9am). Submission details are [here](https://github.com/UVA-DSI/Open-Data-Lab/tree/master/education/Spark19SpDS6003-001/exercise_submissions). 
