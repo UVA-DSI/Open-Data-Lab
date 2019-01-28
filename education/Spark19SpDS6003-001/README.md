@@ -19,6 +19,7 @@
   * [notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/machine_learning.ipynb)
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
   * Volunteer Presentations:
+  * Q&A
   * Mini Capstone Meeting: Is spark useful for our capstone project?
 
 ## Assignments
