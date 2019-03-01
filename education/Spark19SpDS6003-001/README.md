@@ -18,7 +18,8 @@
 * Jan 28: ML pipelining in Spark
   * [notebook](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/machine_learning.ipynb)
 * Jan 30: Workshop Day - short presentations and group work (Exercise due)
-  * Volunteer Presentations:
+  * Volunteer Presentations: [Andrew](https://github.com/UVA-DSI/Open-Data-Lab/blob/master/education/Spark19SpDS6003-001/ace8p-ds6003-spark.pdf)
+  * Q&A
   * Mini Capstone Meeting: Is spark useful for our capstone project?
 
 ## Assignments
