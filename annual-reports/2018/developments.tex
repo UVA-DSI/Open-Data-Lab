@@ -1,6 +1,6 @@
 This year saw great progress for the Open Data Lab. Early on there were weekly meetings to define goals and objectives. Those meetings lead to implementation of several areas and this chapter presents the key developments during 2018.
 
-\section{Phase 1 - Closed $\beta$}
+\section{Phase 1 Closed $\beta$}
 The first decision made for the Open Data Lab was to implement a staged approach. Section~\ref{phases} summarizes the whole scope. This section discusses the state of the closed beta (Phase I). The user base for this phase is predominantly the Data Science Institute. There were 42 participants ranging from students, to faculty, to staff. There were also 26 workshop attendees ranging from a diverse selection of UVA researchers to community members.
 The primary goal of this phase is to test different technology solutions to anticipated needs (see section~\ref{techsolu}. Those range from data storage to computation to discovery to pedagogy, and so on. Of particular note was the wild success of implementing Project Jupyter. The tools developed by this project served many roles and were excelent (details in section~\ref{projectjupyter}.
 This phase will run until several criteria are met. The first is the establishment of a new funding model that will cover the scope of the open beta test. The second is the acquisition of new staff. Currently the Open Data Lab has a bus factor of one and that is not acceptable for phase 2. There are other criteria to be developed the chief of which is to scope the open beta.
@@ -18,17 +18,156 @@ Providing computational resources has been guided by the user base as well. As t
 Many different technologies were tested in 2018. Many options using Amazon Web Services were explored and almost to a point those services were excellent. Local UVA resources were also used and in particular the UVA HPC portal developed out of the VP-IT's office is phenomenal. Collaboration is also underway with the UVA library regarding the discovery component of the Open Data Lab and the implementation of Harvard's Datavese, known locally at UVA as Libra. For version control and sharing purposed GitHub was evaluated.
 
 \subsection{Amazon Web Services}
+Cloud computing provides agility that local computational resources do not. To that end we established a contract with Amazon Web Services (AWS) through the third-party vendor DLT solutions. This contract is collectively negotiated and takes advantage of the Internet-2 network. \href{https://www.internet2.edu/products-services/cloud-services-applications/amazon-web-services/}{Here is a link to the contract details}.
+
+In selecting a cloud resource provider our choice was informed by the needs of the  MSDS students at the DSI. The most requested cloud service was AWS and the plurality of job postings that are interested in cloud skills prefer AWS. During 2018 the initial scope of the AWS exploration was for functionality on colocating data and computation. However there was substantial mission creep and now Pete has functionally become the sysadmin for the DSI AWS account.
+
+In the following sections we will breakdown the different services used by the ODL.
+
+\begin{center}
+Summary of Services Evaluated in 2018
+\begin{tabular}{lccr}
+\hline
+\hline
+Service & Function & Notes \\
+\hline
+\hline
+S3 & Object Storage & \$30/TB/yr \\
+EC2 & Compute Instances & \href{https://aws.amazon.com/ec2/pricing/on-demand/}{pricing} \\
+SageMaker & Project Jupyter & popular interface \\
+IAM &  Identity and Access Management  & users and groups \\
+API Gateway & Credentialed REST & allows trigger of lambda \\
+Lambda & Serverless Functions & perform miscellaneous tasks\\
+CloudWatch & Log/Monitor/Alarm & more important once scaled \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+
 \subsubsection{S3}
-\subsubsection{EC2}
-\subsubsection{SageMaker (Jupyter)}
-\label{projectjupyter}
-\subsubsection{IAM}
-\subsubsection{API Gateway}
-\subsubsection{Architecture Diagrams}
-\subsubsection{lambda}
+This service provides the cheapest usable storage solution at scale. Furthermore recent policy developments at Amazon now require that other services interact with S3 (object storage) with comparable performace to block storage. That policy is very good for the ODL purposes. It means that cheaper Object Storage can be used for larger and larger datasets without yielding performance of execution. Additionally this means only one storage solution needs to be implemented. We do not need to provision additional block storage for execution operations requiring data migration and costs of duplicate storage.
+
+The S3 systems divides the data into buckets. For this test we treated a bucket as the unit holding data for a particular research project. As a result we have 22 buckets provisioned to accomodate all of our efforts. All buckets on AWS are localized to a region but must have a globally unique name. To that end for phase 1 we have adopted the following convention. Each bucket id begins with 'odl-' and is followed by the four character project id (eg: odl-hmtt).
+
+\begin{center}
+Summary of S3 Buckets Provisioned for ODL 2018
+\begin{tabular}{lccr}
+\hline
+\hline
+ID & Project & Notes \\
+\hline
+\hline
+odl-bamc & Bourne/Mura Capstone & \\
+odl-bamc-scratch & Bourne/Mura Capstone & scratch space \\
+odl-cbwc & & \\
+odl-dome & Dominion Capstone & defunct \\
+odl-hmtt & Healthy Markets & 13\,TB \\
+odl-hmtt-scratch & Healthy Markets & scratch space \\
+odl-nept & Numismatic Linked Open Data & in development \\
+odl-orci & Educational Open Datasets & in development \\
+odl-pmis & & \\
+odl-podc & DSI Communications & \\
+odl-projhects-test & DSI project configurations & \\
+odl-readonly-test & read only test & \\
+odl-scratch-test & scratch space test & \\
+odl-sp19-sys6016 & Class materials & \\
+odl-spark-education & Spark Educational Materials & \\
+odl-spark19spds6003-001 & Class Materials & \\
+odl-watr & Women and Terrorism Recruitment & \\
+odl-watr-scratch & Women and Terrorism Recruitment & \\
+odl-wiki & Wiki Capstone & \\
+\hline
+2017-2018-capstone-plos & 17/18 capstone & remnant from phase 0 \\
+uva-bucket & initial test bucket & remnant from phase 0 \\
+846033058400-dlt-utilization & DLT bucket & part of DLT contract \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+
+For the example of 'odl-hmtt' this bucket serves the Healthy Markets project. We bill that project PTAO for the service the ODL provides. The mechanism is to pay the DLT contract off the ODL PTAO and then do a cost transfer annually from the Healthy Markets PTAO to the ODL PTAO.
+
 \subsubsection{13\,TB Data Transfer}
-\subsubsection{Usage Report}
+When we acquired the Healthy Markets dataset we transferred it from their aws bucket to ours. However this transfer was not trivial. AWS was unwilling to change the bucket ownership from their account to our so we had to copy the data over.
+
+The recommendation was to use the AWS CLI to perform the copy. It functions very similarly to scp from standtard unix systems. However we discovered several interesting features.
+\begin{itemize}
+\item Some of the files were copied to our bucket using an IAM account on their AWS account. Then Healthy Markets deleted that IAM user and as a result we lost control of the files in our bucket. Efforts to regain control are ongoing through DLT solutions.
+\item Direct bucket to bucket transfer is managed via a serverless operation and does not prototype the transfer. As a result the resources allocated automatically were not sufficient to transfer 13\,TB during a human lifetime. We then setup a dedicated server via EC2 and were able to configure the system to complete the transfer at a rate of about 4\,TB per day. We did incur cost for operating that server but is was not prohibitive.
+\item The AWS CLI is not optimized for mass transfer and to copy the data in a reasonable timescale we had to write some scripts to chunk the operation. That work is located on the \href{https://github.com/UVA-DSI/Open-Data-Lab/tree/master/aws/large_s3_transfer}{ODL github page}.
+\end{itemize}
+
+\subsubsection{EC2}
+This service allows for provisioning of compute resources. We established lambda functions to automate the create of EC2 instances for projects given a json configurationf file. Here is \href{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/lambda/src/stand_up.py}{the link to the code}. And here is a sample JSON file:
+
+\begin{verbatim}
+{
+   "projectId": "open-data-lab",
+   "github": "https://github.com/UVA-DSI/Open-Data-Lab.git",
+   "data-bucket": "odl-hmtt",
+   "scratch-bucket": "odl-scratch-test",
+   "ImageId": "ami-b70554c8",
+   "InstanceType": "t2.nano",
+   "email": "lpa2a@virginia.edu",
+   "maxNumInstances": "1"
+}
+\end{verbatim}
+
+These EC2 units are monitored by the CloudWatch system and we can configure them to turn on and off as necessary.
+
+The majority of our users use EC2 as their compute engine however they access the compute via auto-provisioning from the SageMaker service.
+
+
+\subsubsection{SageMaker (Project Jupyter)}
+\label{projectjupyter}
+
+SageMaker has been the breakout star of the 2018 ODL development phase. Our MSDS students prefer Project Jupyter as their mechanism for using computational and storage resources. To that end Pete went to the JupyterCon in New York City in the fall of 2018. \href{https://github.com/UVA-DSI/conferences/tree/master/JupyterCon18}{Details of his experience are found here}.
+At this conference Pete was able to speak directly with the creators, developers, and users of Project Jupyter as well as the AWS developers of SageMaker. This service through the power of Project Jupyter is able to democratize the access and management of computational resources. The systems lifts a large cognative load off the user and empowers them to accomplish their goals efficiently without requiring arcane knowledge of computers. Our working metaphor is as follows:
+
+\begin{quote}
+\textbf{
+The user is able to drive the car and get where they want to go without needing to first learn how to build a transmission.
+}
+\end{quote}
+
+This power is the true killer feature of Project Jupyter and is the reason the system is so popular and widely used. Often people we say the ability to break code into cells and use markdown and inline plotting is the killer feature but it is really the lifting of the cognitive load.
+
+\subsubsection{IAM}
+This services governs Identity and Access Management. It breaks down into users and groups. Users are placed into appropriate logical groups and then access policies are assigned to groups.
+When testing permission settings a dummy IAM user is established and given the same groups as the user being tested. In that way the sysadmin can see what the user sees and debug/test/prepare the system to the user.
+\subsubsection{API Gateway}
+We configured an API gateway to provide a mechanism for the users to trigger lambda functions. The users require credentialing via the standard aws authentication protocol when the post to the Gateway. \href{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/api-gateway/hitapi.py}{Details of the system are on the GitHub here}.
+\begin{verbatim}
+requests.post('https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha-2/vm_stand_up',
+                        auth=auth,
+                        params={'projectID':sys.argv[1]})
+\end{verbatim}
+
+
+
+\subsubsection{lambda}
+This services allows for serverless execution of code. Currently we use it for provisioning of EC2 instances and automation of EC2 management.
+
+
+\subsubsection{CloudWatch}
+This service is how we monitor the system and record logs.
+
+\subsubsection{Architecture Diagrams}
+
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/odl-diagram.png}
+\caption{Schematic of AWS service  configuration\label{fg:aws}}
+\end{figure}
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/odl-iam.png}
+\caption{AWS IAM configuration\label{fg:iam}}
+\end{figure}
+
+
+
 \subsubsection{Support Plan}
+For the first year of the ODL we elected to keep the business support plan. In the future we can have a ten percent savings by eliminating this support.
 \begin{verbatim}
 https://aws.amazon.com/premiumsupport/compare-plans/
 \end{verbatim}
