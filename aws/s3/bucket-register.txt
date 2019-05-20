@@ -1,0 +1,14 @@
+bamc - bourne/mura capstone
+cbwc - defunct
+domi - dominion capstone
+hmtt - healthy markets
+nept - linked open data
+orci - open datasets for education
+pmis - independent study
+podc - dsi podcast
+watr - women and terrorism recruitment
+wiki - wikipedia projects
+mlunder - undergrad ml club
+mlgrad - grad ml club
+sprk - spark training
+gith - gthub trainint
