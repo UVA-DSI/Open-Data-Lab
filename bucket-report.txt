@@ -1,0 +1,92 @@
+plos
+[
+32.1632 GB
+    4
+]
+dlt
+[
+0.00222339 GB
+    15
+]
+bamc
+[
+10.4286 GB
+    970
+]
+mabc scratch
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+cbwc
+[
+0 GB
+    1
+]
+domi
+[
+6.23986e-08 GB
+    2
+]
+hmtt
+[
+13346.8 GB
+    21675
+]
+hmtt-scratch
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+nept
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+orci
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+pmis
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+podc
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+projects-test
+[
+1.47894e-06 GB
+    8
+]
+readonly-test
+[
+1.39298e-05 GB
+    7
+]
+odl scratch test
+[
+5.21857e-05 GB
+    1
+]
+sp19sys6016
+[
+21.8123 GB
+    1389
+]
+spark-education
+[
+0.00650706 GB
+    5
+]
+spark19sp
+[
+16.2812 GB
+    382
+]
+odl-watr
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+watr-scratch
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
+wiki
+[
+410.347 GB
+    568
+]
+uva-bucket
+
+In function sum(), invalid type for value: None, expected one of: ['array-number'], received: "null"
