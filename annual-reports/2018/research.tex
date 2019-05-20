@@ -1,5 +1,55 @@
+This section of the report includes excerpts from research publications produced by groups using the open data lab. We highlight a couple MSDS capstone projects (\ref{sec:BMC} and \ref{sec:wik}) as well as a faculty research project (\ref{sec:hmt}) and the undergraduate machine learning club (\ref{sec:mlc}).
+
 \section{Bourne/Mura Capstone}
+\label{sec:BMC}
+
+\emph{Sean Mullane, Ruoyan Chen, Sri Vaishnavi Vemulapalli, Eli J. Draizen, Ke Wang, Cameron Mura, asnd Philip E. Bourne}
+\bigskip
+
+The biological function of a protein stems from its 3D structure. Understanding these functions is important in biomedical research. Given the high costs of using experimental means to determine protein structures, current methods do not scale. As a result, many have attempted to apply machine learning to this problem to predict structure from amino acid sequence data.
+
+Our work focuses on a sub-problem of this field: predicting locations of the capping motifs which terminate $\alpha$-helix protein structures. These motifs have only been described empirically to date~\cite{ref:bmc}. As a step toward a robust and statistically-based understanding of helix capping, we demonstrate that machine learning modules can be trained to predict helix cap positions from sequence data.
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/bmc1}
+\caption{LSTM with feature vectyor of single amino acid residue as input to each cell}
+\end{figure}
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/bmc2}
+\caption{Effect of Loss Function Weighting}
+\end{figure}
+
+
+
+From poster presented at SIEDS 2019.
+
 \section{DSI Wiki}
+\label{sec:wik}
+
+\emph{Charu Rawat, Arnab Sarkar, Sameer Singh, Rafael Alvarado, and Lane Rasberry}
+\bigskip
+
+In this paper, we propose a framework to understand and detect abuse in the English Wikipedia community. We analyze multiple publicly available data sources provided by Wikipedia. We propose a web scraping methodology to extract user-level data and perform extensive exploratory data analysis to understand the characteristics of users who have been blocked for abusive behavior in the past.
+
+We further build upon these insights to develop an abuse detection model that leverages Natural Language Processing techniques, such as character and word n-grams, sentiment analysis, and topic modeling, to generate features that are used as inputs in a model based on machine learning algorithms to predict abusive behavior.
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/wiki1}
+\caption{Share of block reasons over time}
+\end{figure}
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/wiki2}
+\caption{Toxicity score evaluation}
+\end{figure}
+
+From poster presented at SIEDS 2019.
+
 \section{Healthy Markets}
-\label{sec:hm}
+\label{sec:hmt}
+
+\section{Undergraduate Machine Learning Club}
+\label{sec:mlc}
+
 

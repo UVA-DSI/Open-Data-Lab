@@ -97,44 +97,26 @@ As a result for 2018 the development progress on the ODL came to a halt. Now we 
 Additionally the ODL never achieved a bus factor greater than 1 for any component. As a result there were substantial wait times and often service was delayed due to the FTE being already allocated.
 
 \section{AWS usage}
-\begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/aws-metrics/throughmar/totalcost.png}
-\caption{Schematic of AWS service  configuration\label{fg:aws}}
-\end{figure}
-\begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/aws-metrics/throughmar/ec2wsage.png}
-\caption{AWS IAM configuration\label{fg:iam}}
-\end{figure}
-\begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/aws-metrics/throughmar/sagemaker.png}
-\caption{Schematic of AWS service  configuration\label{fg:aws}}
-\end{figure}
-\begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/aws-metrics/throughmar/s3daily.png}
-\caption{AWS IAM configuration\label{fg:iam}}
-\end{figure}
+To demonstrate the AWS usage we have extended the analysis window into 2019. 
+
+The main driver of AWS cost is the usage of compute resources by research groups (see~\ref{fg:awstotal}. This was a surprising finding. Our belief was the data storage would be the driver. However only one project involved a data set greater than 1\,TB.
+There were 22 S3 buckets created and six contain more than 10\,GB. Two buckets contain more data than is readily available on a laptop. Those are the wikipedia capstone bucket at 400\,GB. And the healthy markets bucket with 13.3\,TB.
+
+The main driver of the compute cost was the use of ml.p2.xlarge instances through sagemaker. Those instances cost \$1.26/hour at time of writing. They are Tesla K80 GPUs from Nvidia with 61\,GB of conventional memory and 12\,GB of GPU memory.
+
+
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/aws-metrics/throughmar/total.png}
-\caption{Schematic of AWS service  configuration\label{fg:aws}}
+\caption{AWS Total Costs\label{fg:awstotal}}
 \end{figure}
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/aws-metrics/throughmar/s3.png}
-\caption{AWS IAM configuration\label{fg:iam}}
+\caption{AWS S3 monthly costs. The main driver is 13.3\,TB for the Healthy Markets project\label{fg:awss3}}
 \end{figure}
+
+
+\section{Local UVA HPC usage}
 
 \section{Funding Sources}
 The ODL is funded by the DSI. The support for the Healthy Markets project is fronted by the ODL and then  cost transferred from the ODL PTAO to the HM PTAO.
 
-
-
-% aws monthly bill breakdown
-%March & 0
-%April & 0
-%May & 0.42
-%June & 0.75
-%July & 0.72
-%August & 3.35
-%September & 2.01
-%October & 93.76
-%November & 509.31
-%December & 288.86
