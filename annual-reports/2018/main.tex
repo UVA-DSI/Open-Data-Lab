@@ -16,44 +16,26 @@
 %%% ---ooo000 END PREAMBLE 000ooo---
 
 \begin{document}
-
 % generates the title
 \maketitle
-
-% introduction
-% include content
 \chapter*{The Team}  \input{team.tex} % People working on project, alphabetical
-
 \chapter*{Letter from the editor}  \input{letter.tex} % Mission and vision and philosophy
-
+\chapter{Executive Summary}\input{conclusion.tex}
 % insert the table of contents
 \tableofcontents
-\pagebreak
-
 \chapter{Overview} \input{overview.tex}
-
 \chapter{Key Developments} \input{developments.tex}
-
 \chapter{Research} \input{research.tex}
-
 \chapter{Education} \input{education.tex}
-
-\chapter{Data sets} \input{datasets.tex}
-	
+\chapter{Data sets} \input{datasets.tex}	
 \chapter{Financial Report} \input{metrics.tex}
-
+\chapter{Conclusion}\input{conclusion.tex}
 %\chapter{publications}
-
-
 \begin{thebibliography}{99}
-
 \bibitem{ref:bmc} Aurora, R. and Rose, G.D. 1998. "Helix capping." Protein Science 7(1), pp. 21-38.
-
 \end{thebibliography}
-
 \end{document}
 
 
 
 
-% I view ‘open’ broadly. Open means: accessible, useable, and responsible. Whatever the context, be it data, methods, education, or even lavatories, accessibility and usability are essential for openness. However just as essential is the responsibility. That may take the form of ethical responsibility, scientific responsibility, financial responsibility, educational responsibility, and the list goes on. By necessity this means, open does not imply free. The burden of responsibility lies both with the producer and the consumer. Which means that open means community. Open means culture. Both of these states are not free but they are empowering and well worth the price of openness.
