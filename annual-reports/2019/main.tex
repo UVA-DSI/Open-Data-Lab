@@ -3,6 +3,7 @@
 % packages
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{pdfpages}
 
 % variables
 \newcommand{\picSize}{0.19\textwidth}
@@ -30,6 +31,9 @@
 \chapter{Data sets} \input{datasets.tex}	
 \chapter{Financial Report} \input{metrics.tex}
 \chapter{Conclusion}\input{conclusion.tex}
+
+\includepdf[page=-]{DSIOpenWorkingGroupSummary-Phase1.pdf} 
+
 %\chapter{publications}
 \begin{thebibliography}{99}
 \bibitem{ref:bmc} Aurora, R. and Rose, G.D. 1998. "Helix capping." Protein Science 7(1), pp. 21-38.
