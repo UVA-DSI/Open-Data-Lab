@@ -49,15 +49,34 @@ From poster presented at SIEDS 2019.
 \section{Healthy Markets}
 \label{sec:hmt}
 
+\emph{Narges Tabari}
+\bigskip
+
+In Healthy Market project, our goal is to understand the effect of high frequency trading on variables such as social media, stock market, retirement plans, and unemployment rate. To do this, we improved the structure of multiple causal models. Examples include: 
+\begin{itemize}
+\item Identifying trends in high frequency trading with structural causal models that were improved by treating the time-series data as images and leveraging the power of convolutional neural networks (CNNs). We use time series data encoded as images using Gramian Angular Fields (GAF) in a classification task. We then built a structural causal model, based on the architecture of the model, that learn structural equations using CNN filter values (Shown in figures above). By doing this, we are able to visually present the important patterns that the model looks for in the image that can potentially be interpreted as variations in the time-series data.
+\item Improving the construction and interpretability of Granger causal models with long short term memory networks (LSTMs) and hierarchical lasso penalties to find out the granger causal nature and the time lag selection between stocks of different companies 
+\end{itemize}
+
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/hm}
+\caption{Share of block reasons over time}
+\end{figure}
+
 \section{Undergraduate Machine Learning Club}
 \label{sec:mlc}
+
+\emph{Jake Grigsby, James Hanson, Hugh Jones, John Morris, Jonah Weissman, Zabihullah Yousuf}
+\bigskip
+
+
 This semester, the Undergrad ML group built the foundations of a new Deep Reinforcement Learning platform. At its center is an implementation of Proximal Policy Optimization with Random Network Distillation. This technique, first published by OpenAI in late 2018, augments the PPO learning algorithm with the 'curiosity' to find novel states - greatly increasing performance in environments with sparse rewards by giving the agent continuous intrinsic ones. Our version is currently geared towards vision-based video game tasks; so far it supports any pixels-only environment from both Gym and Gym-Retro, but can be modified to work with any similar RL package. While the original paper came with an open source implementation, our version is more general purpose and written in TensorFlow's eager execution mode, which will make it easier to extend, debug and maintain going forward. It is also very scalable: we use synchronous gradient descent to process small amounts of data (a single rollout) on each worker, which eliminates the need for a GPU and lets us take full advantage of CPU clusters.
 
 So far we have primarily tested the agent on Sonic The Hedgehog. While not as difficult an exploration environment as famous benchmarks like Montezuma's Revenge, Sonic is an interesting problem because of its very inconsistent difficulty. Long stretches of running right and jumping are broken up by obstacles that require significant long-term planning, creating bottlenecks that tend to destabilize training and require the agent to try new strategies over and over again. Our agent performs surprisingly well, even with just a few parallel workers. Here is an example chart of the training process, which shows the map and the agent's deaths, as well as the internal and external rewards.
 
 \begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/mlunder_figure}
-\caption{Example chart of the training process, which shows the map and the agent's deaths, as well as the internal and external rewards. \cite{github:mlunder} }
+\includegraphics[width=\textwidth]{images/mlunder_figure.png}
+\caption{}
 \end{figure}
 
 
