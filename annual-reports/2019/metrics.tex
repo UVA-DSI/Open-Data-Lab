@@ -11,22 +11,22 @@ Source & Time (FTE) & Time (hours) & USD \\
 \hline
 \multicolumn{4}{c}{Income} \\
 \hline
-DSI Funds & && 6,000 \\
+DSI Funds & && 10,000 \\
 HM Funds & && 475 \\
 Data Scientist & 1/2 & & \\
 Clark Lab Dev & & 80 & \\
 DSI Staff & & 100 & \\
 \hline
-Total Income & 1/2 FTE & 180 & 6,475 \\
+Total Income & 1/2  & 180 & 10,475 \\
 \hline
 \hline
 \multicolumn{4}{c}{Outlays} \\
 \hline
 AWS & && 897 \\
-Personnel Assigned & 1/2 FTE &  & \\
+Personnel Assigned & 1/2  &  & \\
 Personnel Temporary & & 180 & \\
 \hline
-Total Outlays & 1/2 FTE & 180 & 897 \\
+Total Outlays & 1/2  & 180 & 897 \\
 \hline
 \hline
 Net & 0 & 0 & 5578 \\
@@ -43,27 +43,20 @@ Net & 0 & 0 & 5578 \\
 \end{itemize}
 \subsection{Outlays}
 \begin{itemize}
-\item Cash: During 2018 the ODL spent \$897 on AWS.
-\item Personnel: The ODL used the 1/2 FTE from the staff Data Scientist as well as a small ammount of time in meetings from various collaborators. AWS code development was contributed by Tim Clark's lab software developer.
+\item Cash: During FY2018Q1/2 the ODL spent \$897 on AWS.
+\item Cash: During FY2019Q3/4 the ODL spent \$???on AWS.
+\item Personnel: The ODL used the 1/2 FTE from the staff Data Scientist as well as a small ammount of time in meetings from various collaborators. AWS code development was contributed by Clark lab software developer.
 \end{itemize}
 
 
 \subsection{FTE analysis}
-Development progress was made before the start of the fall semester in August of 2018. However the role of the only FTE person on the ODL shifted to become a support role for the research and teaching mission of the DSI. From this three things are clear. 
-\begin{enumerate}
-\item There is a need for proficient computer support personnel for the DSI.
-\item There is a need for proficient educational support personnel for the DSI.
-\item If a ODLDS provides those services they will take more than 1/2 FTE.
-\end{enumerate}
-As a result for 2018 the development progress on the ODL came to a halt. Now we have a good estimate on the needs for support for the DSI, it is one FTE. If the DSI grows that number would increase. We recommend reaching out to Bryan Wright to serve on the hiring committee for this position.
+Development progress was made before the start of the fall semester in August of 2018. However the role of the only person on FTE detail to the ODL shifted to become a support role for the research and teaching mission of the DSI. As a result for the development progress on the ODL came to a halt. Now we have a good estimate on the needs for computational support for the DSI. If the DSI grows that requirement would increase. We recommend reaching out to Bryan Wright from the Physics Department to serve on the hiring committee for future positions in this area.
 
 Additionally the ODL never achieved a bus factor greater than 1 for any component. As a result there were substantial wait times and often service was delayed due to the FTE being already allocated.
 
 \section{AWS usage}
-To demonstrate the AWS usage we have extended the analysis window into 2019. 
-
 The main driver of AWS cost is the usage of compute resources by research groups (see~\ref{fg:awstotal}. This was a surprising finding. Our belief was the data storage would be the driver. However only one project involved a data set greater than 1\,TB.
-There were 22 S3 buckets created and six contain more than 10\,GB. Two buckets contain more data than is readily available on a laptop. Those are the wikipedia capstone bucket at 400\,GB. And the healthy markets bucket with 13.3\,TB.
+There were 22 S3 buckets created and six contain more than 10\,GB. Two buckets contain more data than is easily processed on a laptop. Those are the wikipedia capstone bucket at 400\,GB. And the healthy markets bucket with 13.3\,TB.
 
 The main driver of the compute cost was the use of ml.p2.xlarge instances through sagemaker. Those instances cost \$1.26/hour at time of writing. They are Tesla K80 GPUs from Nvidia with 61\,GB of conventional memory and 12\,GB of GPU memory.
 
@@ -92,7 +85,7 @@ The main driver of the compute cost was the use of ml.p2.xlarge instances throug
 \section{Local UVA HPC usage}
 The Open Data Lab assists researchers in getting access to the local UVA HPC resources. For many of the tasks our users have there is no direct charge from local HPC and we do not track this usage. For more sustained efforts we do track the usage broken down by allocation.
 
-The undergraduate UVA Machine Learning Club used up their entire initial allocation of 5,000\,SUs. They have been issued a new allocation of 100,000\,SUs. Some of their results can be seen in section~\ref{sec:mlc}
+The undergraduate UVA Machine Learning Club used up their entire initial allocation of 5,000\,SUs. They have been issued a new allocation of 100,000\,SUs. The results from one of their projects can be seen in section~\ref{sec:mlc}
 
 The graduate UVA Machine Learning Club has used over half of their intial allocation. They have 3,335\,SUs used and 1,665\,SUs remaining.
 

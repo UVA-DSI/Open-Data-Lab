@@ -1,12 +1,12 @@
 This year saw great progress for the Open Data Lab. Early on there were weekly meetings to define goals and objectives. Those meetings lead to implementation of several areas and this chapter presents the key developments during 2018.
 
 \section{Phase 1 Closed $\beta$}
-The first decision made for the Open Data Lab was to implement a staged approach. Section~\ref{phases} summarizes the whole scope. This section discusses the state of the closed beta (Phase 1). The user base for this phase is predominantly the Data Science Institute. There were 114 participants ranging from students, to faculty, to staff. There were also 26 workshop attendees ranging from a diverse selection of UVA researchers to community members.
-The primary goal of this phase is to test different technology solutions to anticipated needs (see section~\ref{techsolu}). Those range from data storage to computation to discovery to pedagogy, and so on. Of particular note was the wild success of implementing Project Jupyter. The tools developed by this project served many roles and were excelent (details in section~\ref{projectjupyter}).
-This phase will run until several criteria are met. The first is the establishment of a new funding model that will cover the scope of the open beta test. The second is the acquisition of new staff. Currently the Open Data Lab has a bus factor of one and that is not acceptable for phase 2. 
+The first decision made for the Open Data Lab was to implement a staged approach. Section~\ref{phases} summarizes the whole scope. This section discusses the state of the closed beta (Phase 1). The user base for this phase is predominantly the Data Science Institute. There were 116 participants ranging from students, to faculty, to staff. There were also 26 workshop attendees ranging from a diverse selection of UVA researchers to community members.
+The primary goal of this phase is to test different technology solutions to anticipated needs (see section~\ref{techsolu}). Those range from data storage to computation to discovery to pedagogy, and so on. Of particular note was the wild success of implementing Project Jupyter. The tools developed by this project served many roles (see section~\ref{sec:projectjupyter}).
+This phase will run until several criteria are met. The first is the establishment of a new funding model that will cover the scope of the open beta test. The second is the acquisition of new staff. Currently the Open Data Lab has a bus factor of one and phase 2 requires a higher value. 
 
 \section{Establishment of User base}
-This year saw the birth of the Open Data Lab and growth to include 114 users. Those users take various form from capstone research programs at the graduate and undergraduate level to full fleged dissertation research. Some of the users involved are dealing with datasets that now reside within the Open Data Lab. Currently those datasets and under tight restriction as we explore proper security protocols. There is also a contingent of undergrad and graduate students that are part of data science clubs at UVA who gain access to resources through the Open Data Lab.
+This year saw the birth of the Open Data Lab and growth to include 116 users. Those users take various form from capstone research programs at the graduate and undergraduate level to full fleged dissertation research. Some of the users involved are dealing with datasets that now reside within the Open Data Lab. Currently those datasets and under tight restriction as we explore proper security protocols. There is also a contingent of undergrad and graduate students that are part of data science clubs at UVA who gain access to resources through the Open Data Lab.
 
 It is important to understand that the technology behind the system is not the driver of the system. The needs of the user are the driver. Right now the closed beta format allows us to interview new users and tailor a program to them. Sometimes we get the resource wrong and adjustments have to be made.
 Regarding data storage the use of S3 storage from Amazon Web Services has served a broad selection of users well. Recent developments in AWS object storage technology enable users to use it as if it were block storage. As a result S3 has proved an effective solution both for large scale data storage as well as database query repositories.
@@ -15,12 +15,12 @@ Providing computational resources has been guided by the user base as well. As t
 
 \section{Technology Exploration}
 \label{techsolu}
-Many different technologies were tested in 2018. Many options using Amazon Web Services were explored and almost to a point those services were excellent. Local UVA resources were also used and in particular the UVA HPC portal developed out of the VP-IT's office is phenomenal. Collaboration is also underway with the UVA library regarding the discovery component of the Open Data Lab and the implementation of Harvard's Datavese, known locally at UVA as Libra. For version control and sharing purposed GitHub was evaluated.
+Many different technologies were tested in 2018. Many options using Amazon Web Services were explored and those services were found to be excellent. Local UVA resources were also used and in particular the UVA HPC portal developed out of the VP-IT's office is phenomenal. Collaboration is also underway with the UVA library regarding the discovery component of the Open Data Lab and the implementation of Harvard's Dataverse, known locally at UVA as Libra. For version control and sharing purposes GitHub was evaluated.
 
 \subsection{Amazon Web Services}
-Cloud computing provides agility that local computational resources do not. To that end we established a contract with Amazon Web Services (AWS) through the third-party vendor DLT solutions. This contract is collectively negotiated and takes advantage of the Internet-2 network. \href{https://www.internet2.edu/products-services/cloud-services-applications/amazon-web-services/}{Here is a link\footnote{\url{https://www.internet2.edu/products-services/cloud-services-applications/amazon-web-services/}} to the contract details}.
+Cloud computing provides agility that local computational resources do not. To that end we established a contract with Amazon Web Services (AWS) through the third-party vendor DLT solutions. This contract is collectively negotiated and takes advantage of the Internet-2 network. \href{https://www.internet2.edu/products-services/cloud-services-applications/amazon-web-services/}~\cite{ref:i2}.
 
-In selecting a cloud resource provider our choice was informed by the needs of the  MSDS students at the DSI. The most requested cloud service was AWS and the plurality of job postings that are interested in cloud skills prefer AWS. During 2018 the initial scope of the AWS exploration was for functionality on colocating data and computation. However there was substantial mission creep and now Pete has functionally become the sysadmin for the DSI AWS account. What started as a development project turned into an operations project as soon as a minimum viable product was established.
+In selecting a cloud resource provider our choice was informed by the needs of the  MSDS students at the DSI. The most requested cloud service was AWS and the plurality of job postings that are interested in cloud skills prefer AWS. During 2018 the initial scope of the AWS exploration was for functionality on colocating data and computation. However the initial implementation was more sucessful than anticipated. The system was popular and as a result Pete Alonzi functionally become the sysadmin for the DSI AWS account. What started as a development project turned into an operations project as soon as a minimum viable product was established. This is great for the DSI because there is a now a new resource for the researchers. However it did pull substantial resources from the development of the Open Data Lab.
 
 In the following sections we will breakdown the different services used by the ODL.
 
@@ -47,7 +47,7 @@ CloudWatch & Log/Monitor/Alarm & more important once scaled \\
 \end{table}
 
 \subsubsection{S3}
-This service provides the cheapest usable storage solution at scale. Furthermore recent policy developments at Amazon now require that other services interact with S3 (object storage) with comparable performace to block storage. That policy is very good for the ODL purposes. It means that cheaper Object Storage can be used for larger and larger datasets without yielding performance of execution. Additionally this means only one storage solution needs to be implemented. We do not need to provision additional block storage for execution operations requiring data migration and costs of duplicate storage.
+This service provides the cheapest usable storage solution at scale. Furthermore recent policy developments at Amazon now require that other services interact with S3 (object storage) with comparable performace to block storage. That policy aligns nicely with the ODL needs. It means that cheaper Object Storage can be used for larger and larger datasets without yielding performance. Additionally this means only one storage solution needs to be implemented. We do not need to provision additional block storage for execution operations requiring data migration.
 
 The S3 systems divides the data into buckets. For this test we treated a bucket as the unit holding data for a particular research project. As a result we have 22 buckets provisioned to accomodate all of our efforts. All buckets on AWS are localized to a region but must have a globally unique name. To that end for phase 1 we have adopted the following convention. Each bucket id begins with 'odl-' and is followed by the four character project id (eg: odl-hmtt).
 
@@ -101,7 +101,7 @@ The recommendation was to use the AWS CLI to perform the copy. It functions very
 \end{itemize}
 
 \subsubsection{EC2}
-This service allows for provisioning of compute resources. We established lambda functions to automate the create of EC2 instances for projects given a json configurationf file. Here is \href{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/lambda/src/stand_up.py}{the link to the code}. And here is a sample JSON file:
+This service allows for provisioning of compute resources. We established lambda functions to automate the create of EC2 instances for projects given a json configurationf file. Here is a sample JSON file:
 
 \begin{verbatim}
 {
@@ -116,15 +116,13 @@ This service allows for provisioning of compute resources. We established lambda
 }
 \end{verbatim}
 
-These EC2 units are monitored by the CloudWatch system and we can configure them to turn on and off as necessary.
-
-The majority of our users use EC2 as their compute engine however they access the compute via auto-provisioning from the SageMaker service.
+These EC2 units are monitored by the CloudWatch system and we can configure them to turn on and off as necessary. The majority of our users use EC2 as their compute engine however they access the compute via auto-provisioning from the SageMaker service.
 
 
 \subsubsection{SageMaker (Project Jupyter)}
 \label{sec:projectjupyter}
 
-SageMaker has been the breakout star of the 2018 ODL development phase. Our MSDS students prefer Project Jupyter as their mechanism for using computational and storage resources. To that end Pete went to the JupyterCon in New York City in the fall of 2018. \href{https://github.com/UVA-DSI/conferences/tree/master/JupyterCon18}{Details of his experience are found here\footnote{\url{https://github.com/UVA-DSI/conferences/tree/master/JupyterCon18}}}.
+SageMaker has been the breakout star of the 2018 ODL development phase. Our MSDS students prefer Project Jupyter as their mechanism for using computational and storage resources. To that end Pete went to the JupyterCon in New York City in the fall of 2018. \footnote{\url{https://github.com/UVA-DSI/conferences/tree/master/JupyterCon18}}.
 At this conference Pete was able to speak directly with the creators, developers, and users of Project Jupyter as well as the AWS developers of SageMaker. This service through the power of Project Jupyter is able to democratize the access and management of computational resources. The systems lifts a large cognative load off the user and empowers them to accomplish their goals efficiently without requiring arcane knowledge of computers. Our working metaphor is as follows:
 
 \begin{quote}
@@ -139,7 +137,7 @@ This power is the true killer feature of Project Jupyter and is the reason the s
 This services governs Identity and Access Management. It breaks down into users and groups. Users are placed into appropriate logical groups and then access policies are assigned to groups.
 When testing permission settings a dummy IAM user is established and given the same groups as the user being tested. In that way the sysadmin can see what the user sees and debug/test/prepare the system to the user.
 \subsubsection{API Gateway}
-We configured an API gateway to provide a mechanism for the users to trigger lambda functions. The users require credentialing via the standard aws authentication protocol when the post to the Gateway. \href{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/api-gateway/hitapi.py}{Details of the system are on the GitHub here\footnote{\url{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/api-gateway/hitapi.py}}}.
+We configured an API gateway to provide a mechanism for the users to trigger lambda functions. The users require credentialing via the standard aws authentication protocol when the post to the Gateway. \href{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/api-gateway/hitapi.py} Details of the system are on GitHub\footnote{\url{https://github.com/UVA-DSI/Open-Data-Lab/blob/master/aws/api-gateway/hitapi.py}}.
 %\begin{verbatim}
 %requests.post('https://pish6mpnr0.execute-api.us-east-1.amazonaws.com/alpha-2/%vm_stand_up',
 %                        auth=auth,
@@ -155,6 +153,7 @@ This services allows for serverless execution of code. Currently we use it for p
 \subsubsection{CloudWatch}
 This service is how we monitor the system and record logs.
 
+\pagebreak
 \subsubsection{Architecture Diagrams}
 
 
@@ -164,7 +163,7 @@ This service is how we monitor the system and record logs.
 \end{figure}
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/odl-iam.png}
-\caption{AWS IAM configuration\label{fg:iam}}
+\caption{Schematic of AWS IAM configuration\label{fg:iam}}
 \end{figure}
 
 
@@ -182,7 +181,7 @@ These solutions are for UVA personnel and their collaborators and as such will n
 \subsection{GitHub}
 GitHub is the most broadly adopted cloud platform for version control. Therefore we evaluated it first. The utility for managing repositories is fully mature. The collaborative features focused around the fork and pull request paradigm are excellent. GitHub also has project level capability with issue tracking and team/permission functionality for managing permissions and progress. We have been extremely pleased with the capabilities of GitHub. The only motivation to try other solutions is for the sake of due diligence.
 
-Concerning the acquisition by Microsoft: Many have raised the issue that GitHub may not be the appropriate solution now that Microsoft has acquired GitHub. However the recent track record of Microsoft is to not meddle with projects like GitHub but rather to protect them. Additionally most users use other Microsoft products. What's more the Open Data Lab also relies heavily on Amazon.
+Concerning the acquisition by Microsoft: Many have raised the issue that GitHub may not be the appropriate solution now that Microsoft has acquired GitHub. However the recent track record of Microsoft is to not meddle with projects like GitHub but rather to protect them. Additionally most users use other Microsoft products. 
 
 We developed a workflow for beginning users on the GitHub platform. Details are given in~\ref{sec:git}.
 
