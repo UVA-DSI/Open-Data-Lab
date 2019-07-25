@@ -21,9 +21,11 @@
 \maketitle
 \input{team.tex} % People working on project, alphabetical
 \chapter*{Project manager's note}  \input{letter.tex} % Mission and vision and philosophy
-\chapter{Executive Summary}\input{conclusion.tex}
+\chapter*{Executive Briefing}\input{conclusion.tex}
 % insert the table of contents
 \tableofcontents
+\listoffigures
+\listoftables
 \chapter{Overview} \input{overview.tex}
 \chapter{Key Developments} \input{developments.tex}
 \chapter{Research} \input{research.tex}
@@ -47,5 +49,47 @@
 \end{document}
 
 
+% sample figure and table
+\begin{figure}[!hbtp]
+\includegraphics[width=\textwidth]{images/hm}
+\caption[Healthy Markets CNN filter schematic]{Schematic of CNN filter process}
+\label{fig:hm}
+\end{figure}
 
-
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{lccr}
+\hline
+\hline
+ID & Project \\
+\hline
+\hline
+odl-bamc & Bourne/Mura Capstone  \\
+odl-bamc-scratch & Bourne/Mura Capstone  \\
+%odl-cbwc &  \\
+odl-dome & Dominion Capstone \\
+odl-hmtt & Healthy Markets \\
+odl-hmtt-scratch & Healthy Markets  \\
+odl-nept & Numismatic Linked Open Data  \\
+odl-orci & Educational Open Datasets  \\
+%odl-pmis &  \\
+odl-podc & DSI Communications  \\
+odl-projhects-test & DSI project configurations  \\
+odl-readonly-test & read only test  \\
+odl-scratch-test & scratch space test  \\
+odl-sp19-sys6016 & Class materials  \\
+odl-spark-education & Spark Educational Materials  \\
+odl-spark19spds6003-001 & Class Materials  \\
+odl-watr & Women and Terrorism Recruitment  \\
+odl-watr-scratch & Women and Terrorism Recruitment  \\
+odl-wiki & Wiki Capstone  \\
+\hline
+2017-2018-capstone-plos & 17/18 capstone  \\
+uva-bucket & initial test bucket  \\
+%846033058400-dlt-utilization & DLT bucket & part of DLT contract \\
+\hline
+\hline
+\end{tabular}
+\caption[S3 bucket summary]{Summary of S3 Buckets Provisioned for ODL 2018}
+\end{center}
+\end{table}

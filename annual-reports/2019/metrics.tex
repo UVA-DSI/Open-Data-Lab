@@ -1,9 +1,8 @@
 \section{Budget} % income and outlays
 The budget for the first year of the open data lab has a scope consisting of a purchase order for AWS time and personnel detailed from the Data Science Institute.
 
+\begin{table}[htbp]
 \begin{center}
-Table of Income and Outlays for 2018-2019
-
 \begin{tabular}{lccr}
 \hline
 \hline
@@ -33,7 +32,9 @@ Net & 0 & 0 & 5578 \\
 \hline
 \hline
 \end{tabular}
+\caption{ODL Income and Outlays for 2018-2019}
 \end{center}
+\end{table}
 
 \subsection{Income}
 \begin{itemize}
@@ -60,6 +61,7 @@ There were 22 S3 buckets created and six contain more than 10\,GB. Two buckets c
 
 The main driver of the compute cost was the use of ml.p2.xlarge instances through sagemaker. Those instances cost \$1.26/hour at time of writing. They are Tesla K80 GPUs from Nvidia with 61\,GB of conventional memory and 12\,GB of GPU memory.
 
+\pagebreak
 
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/aws-metrics/total-cost.png}
@@ -71,6 +73,8 @@ The main driver of the compute cost was the use of ml.p2.xlarge instances throug
 \caption{AWS Total Costs, daily\label{fg:awstotal}}
 \end{figure}
 
+\pagebreak
+
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/aws-metrics/s3-costs.png}
 \caption{AWS S3 Costs\label{fg:awstotal}}
@@ -81,7 +85,7 @@ The main driver of the compute cost was the use of ml.p2.xlarge instances throug
 \caption{AWS S3 Costs, daily\label{fg:awstotal}}
 \end{figure}
 
-
+\pagebreak
 \section{Local UVA HPC usage}
 The Open Data Lab assists researchers in getting access to the local UVA HPC resources. For many of the tasks our users have there is no direct charge from local HPC and we do not track this usage. For more sustained efforts we do track the usage broken down by allocation.
 

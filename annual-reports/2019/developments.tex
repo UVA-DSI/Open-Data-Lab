@@ -26,7 +26,6 @@ In the following sections we will breakdown the different services used by the O
 
 \begin{table}[htbp]
 \begin{center}
-Summary of Services Evaluated in 2018
 \begin{tabular}{lccr}
 \hline
 \hline
@@ -36,13 +35,14 @@ Service & Function & Notes \\
 S3 & Object Storage & \$30/TB/yr \\
 EC2 & Compute Instances & \href{https://aws.amazon.com/ec2/pricing/on-demand/}{pricing} \\
 SageMaker & Project Jupyter & popular interface \\
-IAM &  Identity and Access Management  & users and groups \\
+IAM &  Identity/Access Manager  & users and groups \\
 API Gateway & Credentialed REST & allows trigger of lambda \\
-Lambda & Serverless Functions & perform miscellaneous tasks\\
-CloudWatch & Log/Monitor/Alarm & more important once scaled \\
+Lambda & Serverless Functions & miscellaneous tasks\\
+CloudWatch & Log/Monitor/Alarm &  system monitor\\
 \hline
 \hline
 \end{tabular}
+\caption[AWS evaluation summary]{Summary of Amazon Web Services evaluated in 2018}
 \end{center}
 \end{table}
 
@@ -51,41 +51,43 @@ This service provides the cheapest usable storage solution at scale. Furthermore
 
 The S3 systems divides the data into buckets. For this test we treated a bucket as the unit holding data for a particular research project. As a result we have 22 buckets provisioned to accomodate all of our efforts. All buckets on AWS are localized to a region but must have a globally unique name. To that end for phase 1 we have adopted the following convention. Each bucket id begins with 'odl-' and is followed by the four character project id (eg: odl-hmtt).
 
+\begin{table}[htbp]
 \begin{center}
-Summary of S3 Buckets Provisioned for ODL 2018
 \begin{tabular}{lccr}
 \hline
 \hline
-ID & Project & Notes \\
+ID & Project \\
 \hline
 \hline
-odl-bamc & Bourne/Mura Capstone & \\
-odl-bamc-scratch & Bourne/Mura Capstone & scratch space \\
-odl-cbwc & & \\
-odl-dome & Dominion Capstone & defunct \\
-odl-hmtt & Healthy Markets & 13\,TB \\
-odl-hmtt-scratch & Healthy Markets & scratch space \\
-odl-nept & Numismatic Linked Open Data & in development \\
-odl-orci & Educational Open Datasets & in development \\
-odl-pmis & & \\
-odl-podc & DSI Communications & \\
-odl-projhects-test & DSI project configurations & \\
-odl-readonly-test & read only test & \\
-odl-scratch-test & scratch space test & \\
-odl-sp19-sys6016 & Class materials & \\
-odl-spark-education & Spark Educational Materials & \\
-odl-spark19spds6003-001 & Class Materials & \\
-odl-watr & Women and Terrorism Recruitment & \\
-odl-watr-scratch & Women and Terrorism Recruitment & \\
-odl-wiki & Wiki Capstone & \\
+odl-bamc & Bourne/Mura Capstone  \\
+odl-bamc-scratch & Bourne/Mura Capstone  \\
+%odl-cbwc &  \\
+odl-dome & Dominion Capstone \\
+odl-hmtt & Healthy Markets \\
+odl-hmtt-scratch & Healthy Markets  \\
+odl-nept & Numismatic Linked Open Data  \\
+odl-orci & Educational Open Datasets  \\
+%odl-pmis &  \\
+odl-podc & DSI Communications  \\
+odl-projhects-test & DSI project configurations  \\
+odl-readonly-test & read only test  \\
+odl-scratch-test & scratch space test  \\
+odl-sp19-sys6016 & Class materials  \\
+odl-spark-education & Spark Educational Materials  \\
+odl-spark19spds6003-001 & Class Materials  \\
+odl-watr & Women and Terrorism Recruitment  \\
+odl-watr-scratch & Women and Terrorism Recruitment  \\
+odl-wiki & Wiki Capstone  \\
 \hline
-2017-2018-capstone-plos & 17/18 capstone & remnant from phase 0 \\
-uva-bucket & initial test bucket & remnant from phase 0 \\
-846033058400-dlt-utilization & DLT bucket & part of DLT contract \\
+2017-2018-capstone-plos & 17/18 capstone  \\
+uva-bucket & initial test bucket  \\
+%846033058400-dlt-utilization & DLT bucket & part of DLT contract \\
 \hline
 \hline
 \end{tabular}
+\caption[S3 bucket summary]{Summary of S3 Buckets Provisioned for ODL 2018}
 \end{center}
+\end{table}
 
 For the example of 'odl-hmtt' this bucket serves the Healthy Markets project. We bill that project PTAO for the service the ODL provides. The mechanism is to pay the DLT contract off the ODL PTAO and then do a cost transfer annually from the Healthy Markets PTAO to the ODL PTAO.
 
@@ -158,11 +160,11 @@ This service is how we monitor the system and record logs.
 
 
 \begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/odl-diagram.png}
-\caption{Schematic of AWS service  configuration\label{fg:aws}}
+\includegraphics[width=0.97\textwidth]{images/odl-diagram.png}
+\caption{Schematic of AWS service configuration\label{fg:aws}}
 \end{figure}
 \begin{figure}[!hbtp]
-\includegraphics[width=\textwidth]{images/odl-iam.png}
+\includegraphics[width=0.97\textwidth]{images/odl-iam.png}
 \caption{Schematic of AWS IAM configuration\label{fg:iam}}
 \end{figure}
 
