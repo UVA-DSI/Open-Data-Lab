@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper]{report} % a4paper
+\documentclass[12pt,letterpaper]{book} % a4paper
    
 % packages
 \usepackage{graphicx}
@@ -10,14 +10,16 @@
 \newcommand{\textSize}{0.79\textwidth}
 
 % define the title
-\title{Open Data Lab Annual Report - 2019}
+\title{Open Data Lab Annual Report: FY19-20}
 \author{The Open Data Lab Collaboration}
 
 %%% ---ooo000 END PREAMBLE 000ooo---
 
 \begin{document}
+\pagestyle{headings}
 % generates the title
 
+\frontmatter
 \cleardoublepage
 \maketitle
 
@@ -28,9 +30,13 @@
 
 \newpage
 
+%\pagestyle{plain}
+%\thispagesytle{plain}
+
+
 \input{team.tex} % People working on project, alphabetical
-\chapter*{Project manager's note}  \input{letter.tex} % Mission and vision and philosophy
-\chapter*{Executive Briefing}\input{conclusion.tex}
+\chapter{Project manager's note}  \input{letter.tex} % Mission and vision and philosophy
+\chapter{Executive Briefing}\input{conclusion.tex}
 % insert the table of contents
 \chapter*{Bug Bounty Program}
 We encourage close reading and critique of the Open Data Lab proceedings. If you find a bug in any of our work including this report please let us know. The best way to pass along notes is through a pull request on our github page: \url{https://github.com/UVA-DSI/Open-Data-Lab}.
@@ -38,6 +44,8 @@ We encourage close reading and critique of the Open Data Lab proceedings. If you
 \tableofcontents
 \listoffigures
 \listoftables
+
+\mainmatter
 \chapter{Overview} \input{overview.tex}
 \chapter{Key Developments} \input{developments.tex}
 \chapter{Research} \input{research.tex}
