@@ -11,24 +11,25 @@ Source & Time (FTE) & Time (hours) & USD \\
 \multicolumn{4}{c}{Income} \\
 \hline
 DSI Funds & && 10,000 \\
-HM Funds & && 475 \\
+HM Funds 2018 & && 2,250 \\
 Data Scientist & 1/2 & & \\
 Clark Lab Dev & & 80 & \\
 DSI Staff & & 100 & \\
 \hline
-Total Income & 1/2  & 180 & 10,475 \\
+Total Income & 1/2  & 180 & 12,250 \\
 \hline
 \hline
 \multicolumn{4}{c}{Outlays} \\
 \hline
-AWS & && 897 \\
+AWS 2018 & && 897 \\
+AWS 2019 & && 8,775 \\
 Personnel Assigned & 1/2  &  & \\
 Personnel Temporary & & 180 & \\
 \hline
-Total Outlays & 1/2  & 180 & 897 \\
+Total Outlays & 1/2  & 180 & 9,672 \\
 \hline
 \hline
-Net & 0 & 0 & 5578 \\
+Net & 0 & 0 & 2,578\\
 \hline
 \hline
 \end{tabular}
@@ -38,14 +39,14 @@ Net & 0 & 0 & 5578 \\
 
 \subsection{Income}
 \begin{itemize}
-\item Cash: The DSI allocated \$10,000 for computation and storage from AWS from the period of April 1, 2018 - May 31, 2019. These funds are drawn from PTAO 147242.102.LC00112.30002.
-\item Cash: The Healthy Markets research project used ODL services for computation and storage on AWS. The ODL is authorized to transfer cost in proportion to the Healthy Markets PTAO 147412.107.DR03397.30002.
+\item Cash: The DSI allocated \$10,000 for computation and storage from AWS from the period of April 1, 2018 - May 31, 2019. These funds are drawn from PTAO\footnote{147242.102.LC00112.30002}.
+\item Cash: The Healthy Markets research project used ODL services for computation and storage on AWS. The ODL is authorized to transfer cost in proportion to the Healthy Markets PTAO\footnote{147412.107.DR03397.30002}.
 \item Personnel: The DSI allocated 50\% of a staff Data Scientist's time to the ODL project (1/2 FTE). The Clark lab contributed 80 hours of software developer time.
 \end{itemize}
 \subsection{Outlays}
 \begin{itemize}
-\item Cash: During FY2018Q1/2 the ODL spent \$897 on AWS.
-\item Cash: During FY2019Q3/4 the ODL spent \$???on AWS.
+\item Cash: During FY2018Q1/2 the ODL outlay for AWS was \$897.
+\item Cash: During FY2019Q3/4 the ODL outlay for AWS was \$9,672.
 \item Personnel: The ODL used the 1/2 FTE from the staff Data Scientist as well as a small ammount of time in meetings from various collaborators. AWS code development was contributed by Clark lab software developer.
 \end{itemize}
 
@@ -56,12 +57,12 @@ Development progress was made before the start of the fall semester in August of
 Additionally the ODL never achieved a bus factor greater than 1 for any component. As a result there were substantial wait times and often service was delayed due to the FTE being already allocated.
 
 \section{AWS usage}
-The main driver of AWS cost is the usage of compute resources by research groups (see~\ref{fg:awstotal}. This was a surprising finding. Our belief was the data storage would be the driver. However only one project involved a data set greater than 1\,TB.
+The main driver of AWS cost is the usage of compute resources by research groups (see~\ref{fg:awstotal}). This was a surprising finding. Our belief was the data storage would be the driver. However only one project involved a data set greater than 1\,TB.
 There were 22 S3 buckets created and six contain more than 10\,GB. Two buckets contain more data than is easily processed on a laptop. Those are the wikipedia capstone bucket at 400\,GB. And the healthy markets bucket with 13.3\,TB.
 
 The main driver of the compute cost was the use of ml.p2.xlarge instances through sagemaker. Those instances cost \$1.26/hour at time of writing. They are Tesla K80 GPUs from Nvidia with 61\,GB of conventional memory and 12\,GB of GPU memory.
 
-\pagebreak
+%\pagebreak
 
 \begin{figure}[!hbtp]
 \includegraphics[width=\textwidth]{images/aws-metrics/total-cost.png}
